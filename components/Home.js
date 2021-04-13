@@ -5,7 +5,7 @@ import { Icon } from "@wager-dev/wagerbase";
 
 function Home({ navigation }) {
   return (
-    <View style={{flexDirection: "column", backgroundColor: '#606060'}}>
+    <View style={{flexDirection: "column", backgroundColor: '#606060', height: '100%'}}>
       <View>
         <Header />
       </View>
