@@ -1,0 +1,1 @@
+export { default as WAGERCOIN } from "./wagercoin.png";
