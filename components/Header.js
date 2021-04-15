@@ -20,7 +20,7 @@ const ViewBoxesWithColorAndText = () => {
                     textAlign: "center",
                     margin: "auto",
                     color: "white",
-                    fontFamily: "Brush Script MT",
+                    fontFamily: "BrushScriptMT",
                     fontSize: 40
                 }}>
                 Wager
