@@ -1,6 +1,10 @@
 import * as React from "react";
 import { Button, View, Text } from "react-native";
 import Header from "./Header";
+import { Icon } from "./wagerbase";
+import { Spread } from "./wagerbase";
+import { Balance } from "./wagerbase";
+import { Offers } from "./wagerbase"
 import { Game } from "./wagerbase"
 
 const teams = [
