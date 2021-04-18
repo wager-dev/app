@@ -35,7 +35,7 @@ const styles = StyleSheet.create({
   },
   
   offersContent: {
-    order: 1,
+    // order: 1,
     width: "80%",
     paddingTop: 20,
     paddingBottom: 20,
@@ -44,7 +44,7 @@ const styles = StyleSheet.create({
   },
   
   offersBellIcon: {
-    order: 2,
+    // order: 2,
     width: "20%",
     paddingTop: 10,
     paddingBottom: 0,
@@ -53,7 +53,7 @@ const styles = StyleSheet.create({
   },
   
   offersRequestLine: {
-    fontWeight: 900,
+    fontWeight: "900",
     flexDirection: "row"
   },
   
@@ -63,7 +63,7 @@ const styles = StyleSheet.create({
   },
   
   offersOpenTag: {
-    fontWeight: 900,
+    fontWeight: "900",
     fontSize: 13
   }
 })

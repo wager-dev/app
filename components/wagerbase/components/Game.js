@@ -35,6 +35,7 @@ export const Game = ({ teams, date, title }) => {
 
 const styles = StyleSheet.create({
   gameContainer: {
+    marginTop: 20,
     width: "90%",
     maxWidth: 330,
     padding: 20,
