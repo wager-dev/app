@@ -1,5 +1,7 @@
 import * as React from "react";
 import { View, Text, Image, StyleSheet } from "react-native";
+import { WagerText } from '../'
+
 
 import { Colors } from "../util";
 import { WAGERCOIN } from "../assets";
@@ -14,9 +16,9 @@ export const Balance = ({ tokenAmount }) => {
           <Image style={styles.image} source={WAGERCOIN} />
         </View>
         <View style={styles.amount}>
-          <Text style={styles.text}>
+          <WagerText type="bold">
             Balance: {displayBalance(tokenAmount)}
-          </Text>
+          </WagerText>
         </View>
       </View>
   );
@@ -48,8 +50,8 @@ const styles = StyleSheet.create({
     zIndex: 100,
   },
   image: {
-    width: 22,
-    height: 22,
+    width: 23,
+    height: 23,
   },
   amount: {
     backgroundColor: Colors.orange.dark,
@@ -58,10 +60,10 @@ const styles = StyleSheet.create({
     height: 30,
     paddingLeft: 10,
   },
-  text: {
-    fontWeight: "700",
-    color: Colors.white,
-    lineHeight: 35,
-    fontSize: 20,
-  },
+  // text: {
+  //   fontWeight: "700",
+  //   color: Colors.white,
+  //   lineHeight: 35,
+  //   fontSize: 20,
+  // },
 });
