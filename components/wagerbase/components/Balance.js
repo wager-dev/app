@@ -26,6 +26,7 @@ const styles = StyleSheet.create({
   container: {
     display: "flex",
     flexDirection: "row",
+    justifyContent: "flex-end"
   },
   icon: {
     display: "flex",
@@ -47,12 +48,12 @@ const styles = StyleSheet.create({
     zIndex: 100,
   },
   image: {
-    width: 20,
-    height: 20,
+    width: 25,
+    height: 25,
   },
   amount: {
     backgroundColor: Colors.orange.dark,
-    width: "45%",
+    width: "90%",
     maxWidth: 150,
     height: 30,
     paddingLeft: 10,
