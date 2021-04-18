@@ -4,13 +4,7 @@ import { WagerLogo } from "../assets"
 
 import { Balance } from "./wagerbase";
 
-import { useFonts, Ubuntu_700Bold } from "@expo-google-fonts/ubuntu";
-
 const Header = () => {
-  let [fontsLoaded] = useFonts({
-    Ubuntu_700Bold,
-  });
-
   return (
     <View
       style={{
