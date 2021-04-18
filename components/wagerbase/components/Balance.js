@@ -63,6 +63,5 @@ const styles = StyleSheet.create({
     color: Colors.white,
     lineHeight: 35,
     fontSize: 20,
-    fontFamily: "Ubuntu_700Bold"
   },
 });
