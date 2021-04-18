@@ -6,7 +6,7 @@ import { WAGERCOIN } from "../assets";
 
 export const Balance = ({ tokenAmount }) => {
   const displayBalance = (input) => {
-    return input > 1000 ? `${input / 1000}K` : input;
+    return input > 1000 ? `${input / 1000}k` : input;
   };
   return (
       <View style={styles.container}>
@@ -48,8 +48,8 @@ const styles = StyleSheet.create({
     zIndex: 100,
   },
   image: {
-    width: 25,
-    height: 25,
+    width: 22,
+    height: 22,
   },
   amount: {
     backgroundColor: Colors.orange.dark,
@@ -61,6 +61,8 @@ const styles = StyleSheet.create({
   text: {
     fontWeight: "700",
     color: Colors.white,
-    lineHeight: 30,
+    lineHeight: 35,
+    fontSize: 20,
+    fontFamily: "Ubuntu_700Bold"
   },
 });
