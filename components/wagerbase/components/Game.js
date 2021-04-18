@@ -1,9 +1,10 @@
 import * as React from "react";
 import { View, Text, StyleSheet } from "react-native";
-import { Spread } from "./Spread"
-import { Feather } from '@expo/vector-icons'; 
+import { Spread } from "./Spread";
+import { Feather } from "@expo/vector-icons";
 
-import { Colors } from "../util"
+import { Colors } from "../util";
+import { WagerText } from "../";
 
 export const Game = ({ teams, date, title }) => {
   const homeTeam = teams.find((team) => team.home);
@@ -11,21 +12,39 @@ export const Game = ({ teams, date, title }) => {
 
   return (
     <View style={styles.gameContainer}>
-      <Text style={styles.text}>{title}</Text>
+      <WagerText type="bold">
+        <Text style={styles.text}>{title}</Text>
+      </WagerText>
       <View style={styles.gameTeamsContainer}>
         <View style={styles.game}>
-          <View style={styles.gameLogo}><Feather name="circle" size={40} color="white" /></View>
-          <Text style={styles.teamName}> {homeTeam.name} </Text>
+          <View style={styles.gameLogo}>
+            <Feather name="circle" size={40} color="white" />
+          </View>
+          <View style={styles.teamName}>
+            <WagerText type="regular">
+              <Text style={styles.teamText}>{homeTeam.name}</Text>
+            </WagerText>
+          </View>
           <Spread value={homeTeam.spread} />
         </View>
         <View style={styles.gameTime}>
-          <Text style={styles.text}>{date.day}</Text>
-          <Text style={styles.gameAtSign}>@</Text>
-          <Text style={styles.text}>{date.time}</Text>
+          <WagerText type="regular">
+            <View style={styles.centerText}>
+            <Text style={styles.text}>{date.day}</Text>
+            <Text style={styles.gameAtSign}>@</Text>
+            <Text style={styles.text}>{date.time}</Text>
+            </View>
+          </WagerText>
         </View>
         <View style={styles.gameTeam}>
-          <View style={styles.gameLogo}><Feather name="circle" size={40} color="white" /></View>
-          <Text style={styles.teamName}> {awayTeam.name} </Text>
+          <View style={styles.gameLogo}>
+            <Feather name="circle" size={40} color="white" />
+          </View>
+          <View style={styles.teamName}>
+            <WagerText type="regular">
+              <Text style={styles.teamText}>{awayTeam.name}</Text>
+            </WagerText>
+          </View>
           <Spread value={awayTeam.spread} />
         </View>
       </View>
@@ -46,36 +65,45 @@ const styles = StyleSheet.create({
     display: "flex",
     flexDirection: "row",
     justifyContent: "center",
-    alignItems: "center"
+    alignItems: "center",
   },
   gameTeam: {
     display: "flex",
     flexDirection: "column",
-    alignItems: "center"
+    alignItems: "center",
   },
   gameTime: {
     width: 80,
-    paddingBottom: 18
+    paddingBottom: 18,
+    alignItems: "center"
   },
   gameAtSign: {
-    fontSize: 16,
+    fontSize: 25,
+    fontWeight: "700",
     color: Colors.orange.dark,
     textAlign: "center",
     paddingTop: 3,
-    paddingBottom: 3 
+    paddingBottom: 3,
+  },
+  centerText: {
+    display: "flex",
+    flexDirection: "column",
   },
   text: {
     color: "white",
-    textAlign: "center"
+    textAlign: "center",
+    fontSize: 17,
   },
   teamName: {
-    color: "white",
-    paddingTop: 3,
+    paddingTop: 12,
     paddingBottom: 12,
-    textAlign: "center"
+  },
+  teamText: {
+    fontSize: 17,
+    textAlign: "center",
   },
   gameLogo: {
     alignItems: "center",
-    paddingTop: 15
-  }
-})
+    paddingTop: 15,
+  },
+});
