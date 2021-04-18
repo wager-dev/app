@@ -1,9 +1,26 @@
 import * as React from "react";
 import { Button, View, Text } from "react-native";
 import Header from "./Header";
-import { Icon } from "./wagerbase";
-import { Spread } from "./wagerbase";
+import { Game } from "./wagerbase"
 
+const teams = [
+  {
+    id: "PHI",
+    spread: "-5.5",
+    home: false,
+  },
+  {
+    id: "BOS",
+    spread: "+5.5",
+    home: true,
+  },
+];
+
+const date = {
+  day: "3/16",
+  time: "8pm",
+};
+ 
 function Home({ navigation }) {
   return (
     <View
@@ -36,8 +53,11 @@ function Home({ navigation }) {
             justifyContent: "space-between",
           }}
         >
-          <Icon type="NBA"></Icon>
-          <Spread value={"+5.5"} />
+          <Game       
+            teams={teams}
+            date={date}
+            title={"NBA: Philadelphia 76ers at Boston Celtics"}
+          />
         </View>
       </View>
     </View>
