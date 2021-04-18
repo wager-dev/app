@@ -1,40 +1,30 @@
 import React from "react";
-import { View, Text, StyleSheet } from "react-native";
+import { View, Image } from "react-native";
+import { WagerLogo } from "../assets"
+
 import { Balance } from "./wagerbase";
 
-const ViewBoxesWithColorAndText = () => {
-  const teams = ["PHI"];
+const Header = () => {
   return (
-    <View style={styles.container}>
-      <View style={{ flex: 0.3 }}>
-        <Text style={styles.headerText}>Wager</Text>
+    <View
+      style={{
+        width: "100%",
+        flexDirection: "row",
+        height: 100,
+        padding: 0,
+        paddingTop: 40,
+        paddingBottom: 10,
+        backgroundColor: "#241f1e", // TODO: make color global value
+      }}
+    >
+      <View style={{ width: "60%", paddingLeft: 20, order: 1, justifyContent: "flex-end" }}>
+        <Image style={{width: 100, height: 40}} source={WagerLogo} />
       </View>
-      <View style={styles.balanceView}>
+      <View style={{ width: "40%", order: 2, justifyContent: "flex-end"}}>
         <Balance tokenAmount={80000} />
       </View>
     </View>
   );
 };
 
-const styles = StyleSheet.create({
-  container: {
-    flexDirection: "row",
-    height: 100,
-    paddingLeft: 10,
-    paddingTop: 40,
-    backgroundColor: "#241f1e",
-  },
-  headerText: {
-    textAlign: "center",
-    margin: "auto",
-    color: "white",
-    fontSize: 40,
-  },
-  balanceView: {
-    flex: 0.7,
-    alignItems: "flex-end",
-    justifyContent: "center",
-  },
-});
-
-export default ViewBoxesWithColorAndText;
+export default Header;
