@@ -54,6 +54,7 @@ const styles = StyleSheet.create({
   },
   
   offersMessage: {
+    fontSize: 13,
     paddingTop: 4,
     paddingBottom: 25
   },
