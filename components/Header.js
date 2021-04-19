@@ -10,7 +10,7 @@ const Header = () => {
       style={{
         width: "100%",
         flexDirection: "row",
-        height: 100,
+        height: 70,
         padding: 0,
         paddingTop: 40,
         paddingBottom: 10,

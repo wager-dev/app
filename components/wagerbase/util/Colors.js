@@ -8,4 +8,7 @@ export default {
     light: "#393E46",
     dark: "#222222",
   },
+  system: {
+    black: "#241f1e",
+  }
 };
