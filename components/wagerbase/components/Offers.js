@@ -9,9 +9,17 @@ export const Offers = ({ requests }) => {
   return (
     <View style={styles.offersBox}>
       <View style={styles.offersContent}>
-        <WagerText type="bold"><Text style={styles.offersRequestLine}>{requests} New Wager Requests!</Text></WagerText>
-        <WagerText type="regular"><Text style={styles.offersMessage}>See your current wager requests from your friends </Text></WagerText>
-        <View style={ styles.offersOpenWrapper }><WagerText type="bold"><Text style={styles.offersOpenTag}>OPEN INBOX</Text></WagerText></View>
+        <WagerText type="bold">
+          <Text style={styles.offersRequestLine}>{requests} New Wager Requests!</Text>
+        </WagerText>
+        <WagerText type="regular">
+          <Text style={styles.offersMessage}>See your current wager requests from your friends </Text>
+        </WagerText>
+        <View style={ styles.offersOpenWrapper }>
+          <WagerText type="bold">
+            <Text style={styles.offersOpenTag}>OPEN INBOX</Text>
+          </WagerText>
+        </View>
       </View>
       <View style={styles.offersBellIcon}>
         <FontAwesome name="bell-o" size={24} color="white" />

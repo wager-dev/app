@@ -1,12 +1,42 @@
-import * as React from 'react';
-import { Button, View, Text } from 'react-native';
+import * as React from "react";
+import { View, ScrollView, StyleSheet } from "react-native";
+import Header from "./Header";
 
-function Chats() {
-    return (
-      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-        <Text>Chats Screen</Text>
-      </View>
-    );
+import { WagerText } from "./wagerbase";
+
+function Chats({ navigation }) {
+  return (
+    <View
+      style={{
+        flexDirection: "column",
+        backgroundColor: "#606060",
+        height: "100%",
+      }}
+    >
+      <Header />
+      <ScrollView>
+        <View style={styles.container}>
+          
+        </View>
+      </ScrollView>
+    </View>
+  );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    marginTop: 20,
+    display: "flex",
+    alignItems: "center",
+  },
+  titleText: {
+    marginTop: 10,
+  },
+  chooseIcons: {
+    marginTop: 10,
+    display: "flex",
+    flexDirection: "row",
+  },
+});
 
 export default Chats;
