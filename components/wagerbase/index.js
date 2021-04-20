@@ -7,6 +7,10 @@ export { Game } from "./components/Game";
 export { Offers } from "./components/Offers";
 export { TimeFilter } from "./components/TimeFilter";
 export { WagerResults } from "./components/WagerResults";
+export { Pending } from "./components/Pending";
+export { Potential } from "./components/Potential";
+export { WagerFilters} from "./components/WagerFilters";
+export { WagerCards } from "./components/WagerCards";
  
 export { WagerText } from "./components/WagerText";
 

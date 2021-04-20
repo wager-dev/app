@@ -45,11 +45,9 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   titleText: {
-    marginTop: 10,
-  },
-  titleText: {
     paddingLeft: 20,
-    paddingTop: 20
+    paddingTop: 20,
+    marginTop: 10,
   },
   timeFilter: {
     display: "flex",
@@ -62,9 +60,7 @@ const styles = StyleSheet.create({
     width: "90%",
     display: "flex",
     flexDirection: "column",
-    
   }
-
 });
 
 export default Results;
