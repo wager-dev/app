@@ -2,6 +2,7 @@ import * as React from "react";
 import { View, ScrollView, StyleSheet } from "react-native";
 import Header from "./Header";
 
+import { Pending } from "./wagerbase";
 import { WagerText } from "./wagerbase";
 
 function Wagers({ navigation }) {
@@ -25,7 +26,6 @@ function Wagers({ navigation }) {
 
 const styles = StyleSheet.create({
   container: {
-    marginTop: 20,
     display: "flex",
     alignItems: "center",
   },
