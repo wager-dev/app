@@ -11,7 +11,8 @@ export { Pending } from "./components/Pending";
 export { Potential } from "./components/Potential";
 export { WagerFilters} from "./components/WagerFilters";
 export { WagerCards } from "./components/WagerCards";
- 
+export { MenuOptions } from "./components/MenuOptions";
+
 export { WagerText } from "./components/WagerText";
 
 export { Colors } from "./util";

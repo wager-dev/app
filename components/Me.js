@@ -1,12 +1,9 @@
 import * as React from "react";
 import { View, ScrollView, StyleSheet } from "react-native";
-import Header from "./Header";
 
-import { Pending } from "./wagerbase"
-import { Potential } from "./wagerbase"
-import { WagerFilters } from "./wagerbase"
+
 import { WagerText } from "./wagerbase";
-import { WagerCards } from "./wagerbase";
+import { MenuOptions } from "./wagerbase";
 
 function Me({ navigation }) {
   return (
@@ -17,32 +14,82 @@ function Me({ navigation }) {
         height: "100%",
       }}
     >
-      <Header />
+      <ScrollView>
         <View style={styles.container}>
-          <View style={styles.pendingPotential}>
-            <Pending pendingTokenAmount={200000} />
-            <Potential potentialTokenAmount={428000} />
-          </View>
+        {menuOptions.map((option) => (
+            <MenuOptions
+              key={option.id}
+              icon={option.icon}
+              title={option.title}
+              toggle={option.toggle}
+            />
+          ))}
         </View>
-        <View style={styles.titleText}>
-          <WagerText type="title">Wagers</WagerText>
-        </View>
-        <View styles={styles.container}>
-          <View style={styles.timeFilters}>
-            <WagerFilters status="Live" selected />
-            <WagerFilters status="Accepted" />
-            <WagerFilters status="Pending" />
-          </View>
-          <View style={styles.cards}>
-            <WagerCards/>
-          </View>
-        </View>
+      </ScrollView>
     </View>
   );
 }
 
+const menuOptions = [
+  {
+    id: "001",
+    title: "Profile Setting",
+    icon: "x",
+    toggle: false,
+  },
+  {
+    id: "002",
+    title: "Notification",
+    icon: "x",
+    toggle: true,
+  },
+  {
+    id: "003",
+    title: "Deposit",
+    icon: "x",
+    toggle: false,
+  },
+  {
+    id: "004",
+    title: "Withdraw",
+    icon: "x",
+    toggle: false,
+  },
+  {
+    id: "005",
+    title: "Transaction History",
+    icon: "x",
+    toggle: false,
+  },
+  {
+    id: "006",
+    title: "Invite Friends",
+    icon: "x",
+    toggle: false,
+  },
+  {
+    id: "007",
+    title: "Leave a Review",
+    icon: "x",
+    toggle: false,
+  },
+  {
+    id: "008",
+    title: "Contact Support",
+    icon: "x",
+    toggle: false,
+  },
+  {
+    id: "009",
+    title: "Log Out",
+    icon: "x",
+    toggle: false,
+  },
+]
+
 const styles = StyleSheet.create({
   container: {
+    marginTop: 20,
     display: "flex",
     alignItems: "center",
   },
@@ -54,30 +101,6 @@ const styles = StyleSheet.create({
     display: "flex",
     flexDirection: "row",
   },
-  pendingPotential: {
-    display: "flex",
-    flexDirection: "row",
-    justifyContent: "space-evenly",
-    width:"90%",
-    alignItems: "flex-start",
-    marginTop: 20
-  },
-  titleText: {
-    paddingLeft: 20,
-    paddingTop: 10
-  },
-  timeFilters: {
-    display: "flex",
-    flexDirection: "row",
-    justifyContent: "space-between",
-    alignItems: "center",
-    paddingLeft: 20,
-    paddingRight: 20,
-    paddingTop: 20
-  },
-  cards:{
-    padding: 20,
-  }
 });
 
 export default Me;
