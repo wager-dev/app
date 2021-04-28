@@ -1,12 +1,12 @@
 import * as React from "react";
-import { View, ScrollView, StyleSheet } from "react-native";
-import Header from "./Header";
+import { View, ScrollView, Text, StyleSheet } from "react-native";
 
-import { Pending } from "./wagerbase"
-import { Potential } from "./wagerbase"
-import { WagerFilters } from "./wagerbase"
+
 import { WagerText } from "./wagerbase";
-import { WagerCards } from "./wagerbase";
+import { MenuOptions } from "./wagerbase";
+import { MaterialIcons } from '@expo/vector-icons';
+import { Entypo } from '@expo/vector-icons';
+import { Colors } from '../components/wagerbase/util/Colors';
 
 function Me({ navigation }) {
   return (
@@ -17,32 +17,103 @@ function Me({ navigation }) {
         height: "100%",
       }}
     >
-      <Header />
-        <View style={styles.container}>
-          <View style={styles.pendingPotential}>
-            <Pending pendingTokenAmount={200000} />
-            <Potential potentialTokenAmount={428000} />
+      <ScrollView>
+        <View style={style.backArrow}>
+          <MaterialIcons name="arrow-back" size={24} color="white" />
+            <WagerText type="regular">
+              <Text style={style.titleText}>Profile</Text>
+            </WagerText>
+        </View>
+        <View style={style.container}>
+        <View style={style.profilePicture}>
+          <Entypo name="circle" size={55} color="orange" />
+        </View>
+        <View style={style.nameAndTag}>
+          <View>
+            <WagerText type="regular">
+              <Text style={style.name}>Peter Moses</Text>
+            </WagerText>
+          </View>
+          <View>
+            <WagerText type="regular">
+              <Text style={style.tag}>@petermoses32</Text>
+            </WagerText>
           </View>
         </View>
-        <View style={styles.titleText}>
-          <WagerText type="title">Wagers</WagerText>
+        {menuOptions.map((option) => (
+            <MenuOptions
+              key={option.id}
+              icon={option.icon}
+              title={option.title}
+              toggle={option.toggle}
+            />
+          ))}
         </View>
-        <View styles={styles.container}>
-          <View style={styles.timeFilters}>
-            <WagerFilters status="Live" selected />
-            <WagerFilters status="Accepted" />
-            <WagerFilters status="Pending" />
-          </View>
-          <View style={styles.cards}>
-            <WagerCards/>
-          </View>
-        </View>
+      </ScrollView>
     </View>
   );
 }
 
-const styles = StyleSheet.create({
+const menuOptions = [
+  {
+    id: "001",
+    title: "Profile Setting",
+    icon: "x",
+    toggle: false,
+  },
+  {
+    id: "002",
+    title: "Notification",
+    icon: "x",
+    toggle: true,
+  },
+  {
+    id: "003",
+    title: "Deposit",
+    icon: "x",
+    toggle: false,
+  },
+  {
+    id: "004",
+    title: "Withdraw",
+    icon: "x",
+    toggle: false,
+  },
+  {
+    id: "005",
+    title: "Transaction History",
+    icon: "x",
+    toggle: false,
+  },
+  {
+    id: "006",
+    title: "Invite Friends",
+    icon: "x",
+    toggle: false,
+  },
+  {
+    id: "007",
+    title: "Leave a Review",
+    icon: "x",
+    toggle: false,
+  },
+  {
+    id: "008",
+    title: "Contact Support",
+    icon: "x",
+    toggle: false,
+  },
+  {
+    id: "009",
+    title: "Log Out",
+    icon: "x",
+    toggle: false,
+  },
+]
+
+const style = StyleSheet.create({
   container: {
+    marginTop: 20,
     display: "flex",
     alignItems: "center",
   },
@@ -54,29 +125,30 @@ const styles = StyleSheet.create({
     display: "flex",
     flexDirection: "row",
   },
-  pendingPotential: {
+  backArrow: {
+    paddingTop: 30,
+    paddingLeft: 10,
     display: "flex",
     flexDirection: "row",
-    justifyContent: "space-evenly",
-    width:"90%",
-    alignItems: "flex-start",
-    marginTop: 20
+    width: "56%",
+    justifyContent: "space-between",
+    alignItems: "center"
   },
   titleText: {
-    paddingLeft: 20,
-    paddingTop: 10
+    fontSize: 18
   },
-  timeFilters: {
+  nameAndTag: {
     display: "flex",
-    flexDirection: "row",
-    justifyContent: "space-between",
+    flexDirection: "column",
+    justifyContent: "center",
     alignItems: "center",
-    paddingLeft: 20,
-    paddingRight: 20,
-    paddingTop: 20
+    padding: 10
   },
-  cards:{
-    padding: 20,
+  name: {
+    fontSize: 25
+  },
+  tag: {
+    fontSize: 18
   }
 });
 
