@@ -1,9 +1,12 @@
 import * as React from "react";
-import { View, ScrollView, StyleSheet } from "react-native";
+import { View, ScrollView, Text, StyleSheet } from "react-native";
 
 
 import { WagerText } from "./wagerbase";
 import { MenuOptions } from "./wagerbase";
+import { MaterialIcons } from '@expo/vector-icons';
+import { Entypo } from '@expo/vector-icons';
+import { Colors } from '../components/wagerbase/util/Colors';
 
 function Me({ navigation }) {
   return (
@@ -15,7 +18,28 @@ function Me({ navigation }) {
       }}
     >
       <ScrollView>
-        <View style={styles.container}>
+        <View style={style.backArrow}>
+          <MaterialIcons name="arrow-back" size={24} color="white" />
+            <WagerText type="regular">
+              <Text style={style.titleText}>Profile</Text>
+            </WagerText>
+        </View>
+        <View style={style.container}>
+        <View style={style.profilePicture}>
+          <Entypo name="circle" size={55} color="orange" />
+        </View>
+        <View style={style.nameAndTag}>
+          <View>
+            <WagerText type="regular">
+              <Text style={style.name}>Peter Moses</Text>
+            </WagerText>
+          </View>
+          <View>
+            <WagerText type="regular">
+              <Text style={style.tag}>@petermoses32</Text>
+            </WagerText>
+          </View>
+        </View>
         {menuOptions.map((option) => (
             <MenuOptions
               key={option.id}
@@ -87,7 +111,7 @@ const menuOptions = [
   },
 ]
 
-const styles = StyleSheet.create({
+const style = StyleSheet.create({
   container: {
     marginTop: 20,
     display: "flex",
@@ -101,6 +125,31 @@ const styles = StyleSheet.create({
     display: "flex",
     flexDirection: "row",
   },
+  backArrow: {
+    paddingTop: 30,
+    paddingLeft: 10,
+    display: "flex",
+    flexDirection: "row",
+    width: "56%",
+    justifyContent: "space-between",
+    alignItems: "center"
+  },
+  titleText: {
+    fontSize: 18
+  },
+  nameAndTag: {
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+    padding: 10
+  },
+  name: {
+    fontSize: 25
+  },
+  tag: {
+    fontSize: 18
+  }
 });
 
 export default Me;
