@@ -7,8 +7,6 @@ import { Offers } from "./wagerbase";
 import { Icon } from "./wagerbase";
 import { Game } from "./wagerbase";
 
-import { MIA } from "./NBALogos";
-
 function Home({ navigation }) {
   return (
     <View
@@ -29,7 +27,6 @@ function Home({ navigation }) {
             <Icon type="NBA" selected />
             <Icon type="NFL" />
           </View>
-          <MIA />
           {games.map((game) => (
             <Game
               key={game.id}

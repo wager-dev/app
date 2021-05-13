@@ -4,6 +4,7 @@ import { View, ScrollView, Text, StyleSheet } from "react-native";
 
 import { WagerText } from "./wagerbase";
 import { MenuOptions } from "./wagerbase";
+import { ProfilePicture } from './wagerbase'
 import { MaterialIcons } from '@expo/vector-icons';
 import { Entypo } from '@expo/vector-icons';
 import { Colors } from '../components/wagerbase/util/Colors';
@@ -26,7 +27,7 @@ function Me({ navigation }) {
         </View>
         <View style={style.container}>
         <View style={style.profilePicture}>
-          <Entypo name="circle" size={55} color="orange" />
+          <ProfilePicture url="https://pbs.twimg.com/profile_images/1392449626972827648/3gnqc9PE_x96.jpg" size="large" />
         </View>
         <View style={style.nameAndTag}>
           <View>
@@ -53,6 +54,8 @@ function Me({ navigation }) {
     </View>
   );
 }
+
+
 
 const menuOptions = [
   {
