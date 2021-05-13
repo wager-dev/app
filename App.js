@@ -23,7 +23,7 @@ const Tab = createBottomTabNavigator();
 
 function App() {
   const [credential, updateCredential] = React.useState(null);
-  if (credential === null) {
+  if (!credential === null) {
     return (
       <SafeAreaView style={{ backgroundColor: Colors.system.black, flex: 1 }}>
         <View

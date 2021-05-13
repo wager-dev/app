@@ -1,1 +1,20 @@
-Menu options component hex values need to change
+General:
+* Team + profile image combo needs to be created for the wagers tab
+* Update new wager to include team logo
+
+Later:
+* Me tab need icon library built and integrated
+* Make the page filters into functioning buttons that sort data, start by making
+  them change from selected to unselected and change style settings
+* Turn the balance component into a button
+* Notifications toggle needs non hexcode coloration
+* Potential Icon needs to be updated to not match the Pending icon
+* me footer icon needs profile
+* Create the rest of the sports filters for the Home page
+* Wager requests box needs correct background
+* Psuedo data array needs to be created for the Wagers tab
+
+Big Lifts:
+* Make expo app public
+* Fix the back arrow and make it a "Multi View Header"
+** Create stack navigator for the Me page
