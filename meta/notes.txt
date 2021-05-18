@@ -1,6 +1,8 @@
 General:
-* Team + profile image combo needs to be created for the wagers tab
-* Update new wager to include team logo
+* Team + profile image combo needs to be created for the wagers tab IN PROGRESS
+* Update new wager to include team logo DONE
+
+* Create the function to sort through the SVG's and pick the correct one as a prop IMPORTANT
 
 Later:
 * Me tab need icon library built and integrated
