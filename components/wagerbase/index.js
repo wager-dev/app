@@ -14,6 +14,7 @@ export { WagerFilters} from "./components/WagerFilters";
 export { WagerCards } from "./components/WagerCards";
 export { MenuOptions } from "./components/MenuOptions";
 export { ProfilePicture } from "./components/ProfilePicture";
+export { TeamLogo } from "./components/TeamLogo";
 
 export { WagerText } from "./components/WagerText";
 
