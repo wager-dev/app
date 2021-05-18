@@ -2,6 +2,7 @@ import * as React from "react";
 import { View, Text, StyleSheet } from "react-native";
 import { Spread } from "./Spread";
 import { Feather } from "@expo/vector-icons";
+import { TeamAndProfilePicture } from "./TeamAndProfilePicture";
 
 import { Colors } from "../util";
 import { WagerText } from "../";
@@ -18,7 +19,7 @@ export const Game = ({ teams, date, title }) => {
       <View style={styles.gameTeamsContainer}>
         <View style={styles.game}>
           <View style={styles.gameLogo}>
-            <Feather name="circle" size={40} color="white" />
+            <TeamAndProfilePicture/>
           </View>
           <View style={styles.teamName}>
             <WagerText type="regular">

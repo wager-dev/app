@@ -1,6 +1,7 @@
 import { TimeFilter } from "./components/TimeFilter";
 
 export { Balance } from "./components/Balance";
+export { TeamAndProfilePicture } from "./components/TeamAndProfilePicture"
 export { Icon } from "./components/Icon"
 export { Spread } from "./components/Spread";
 export { Game } from "./components/Game";
