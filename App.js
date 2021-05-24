@@ -84,7 +84,7 @@ function App() {
                 if (route.name === "Home") {
                   iconName = "home-outline";
                 } else if (route.name === "Wagers") {
-                  iconName = "home-outline";
+                  iconName = "log-out-outline";
                 } else if (route.name === "Results") {
                   iconName = "trophy-outline";
                 } else if (route.name === "Chats") {

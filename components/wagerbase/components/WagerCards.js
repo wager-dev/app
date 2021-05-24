@@ -4,6 +4,7 @@ import { Feather } from "@expo/vector-icons";
 
 import { Colors } from "../util";
 import { WagerText } from "../";
+import { TeamLogo } from "./TeamLogo";
 
 export const WagerCards = ({}) => {
   return (
@@ -11,7 +12,7 @@ export const WagerCards = ({}) => {
       <View style={styles.usersAndTeams}>
         <WagerText type="regular">
           <View style={styles.user}>
-            <Feather name="circle" size={40} color="white" />
+            <TeamLogo />
             <Text style={styles.text}>Celtics +5.5</Text>
             <Text style={styles.text}>Me</Text>
           </View>
@@ -25,7 +26,7 @@ export const WagerCards = ({}) => {
         </WagerText>
         <WagerText type="regular">
           <View style={styles.opponent}>
-            <Feather name="circle" size={40} color="white" />
+            <TeamLogo/>
             <Text style={styles.text}>Sixers -5.5</Text>
             <Text style={styles.text}>Sarah</Text>
           </View>
@@ -54,7 +55,7 @@ const styles = StyleSheet.create({
   usersAndTeams: {
     backgroundColor: Colors.grey.light,
     width: "80%",
-    height: 120,
+    height: 130,
     borderBottomLeftRadius: 20,
     display: "flex",
     flexDirection: "row",
@@ -64,23 +65,24 @@ const styles = StyleSheet.create({
   user: {
     width: 90,
     paddingBottom: 18,
-    paddingTop: 20,
+    paddingTop: 7,
     alignItems: "center"
   },
   dateTime: {
       width: 80,
       paddingBottom: 18,
+      paddingTop: 20,
       alignItems: "center"
   },
   opponent: {
     width: 80,
     paddingBottom: 18,
-    paddingTop: 20,
+    paddingTop: 8,
     alignItems: "center"
   },
   potentialAndStatus: {
     backgroundColor: Colors.orange.light,
-    height: 120,
+    height: 130,
     width: "20%",
     borderTopRightRadius: 20,
     borderBottomRightRadius: 20,

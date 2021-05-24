@@ -1,6 +1,7 @@
 import { TimeFilter } from "./components/TimeFilter";
 
 export { Balance } from "./components/Balance";
+export { TeamAndProfilePicture } from "./components/TeamAndProfilePicture"
 export { Icon } from "./components/Icon"
 export { Spread } from "./components/Spread";
 export { Game } from "./components/Game";
@@ -12,6 +13,8 @@ export { Potential } from "./components/Potential";
 export { WagerFilters} from "./components/WagerFilters";
 export { WagerCards } from "./components/WagerCards";
 export { MenuOptions } from "./components/MenuOptions";
+export { ProfilePicture } from "./components/ProfilePicture";
+export { TeamLogo } from "./components/TeamLogo";
 
 export { WagerText } from "./components/WagerText";
 
