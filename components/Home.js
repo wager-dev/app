@@ -1,11 +1,12 @@
 import * as React from "react";
-import { View, ScrollView, StyleSheet } from "react-native";
+import { View, ScrollView, StyleSheet, Image } from "react-native";
 import Header from "./Header";
 
 import { WagerText } from "./wagerbase";
 import { Offers } from "./wagerbase";
 import { Icon } from "./wagerbase";
 import { Game } from "./wagerbase";
+import { TeamAndProfilePicture } from "./wagerbase";
 
 function Home({ navigation }) {
   return (
@@ -15,8 +16,9 @@ function Home({ navigation }) {
         backgroundColor: "#606060",
         height: "100%",
       }}
-    >
+      >
       <Header />
+        <TeamAndProfilePicture />
       <ScrollView>
         <View style={styles.container}>
           <Offers requests="8" />
