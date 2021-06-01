@@ -18,17 +18,16 @@ function Home({ navigation }) {
       }}
       >
       <Header />
-        <TeamAndProfilePicture />
       <ScrollView>
         <View style={styles.container}>
           <Offers requests="8" />
           <View style={styles.titleText}>
             <WagerText type="title">Create New Wager</WagerText>
           </View>
-          <View style={styles.chooseIcons}>
+          {/* <View style={styles.chooseIcons}>
             <Icon type="NBA" selected />
             <Icon type="NFL" />
-          </View>
+          </View> */}
           {games.map((game) => (
             <Game
               key={game.id}

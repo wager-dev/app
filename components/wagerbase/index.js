@@ -11,12 +11,11 @@ export { WagerResults } from "./components/WagerResults";
 export { Pending } from "./components/Pending";
 export { Potential } from "./components/Potential";
 export { WagerFilters} from "./components/WagerFilters";
-export { WagerCards } from "./components/WagerCards";
+export { WagerCard } from "./components/WagerCard";
 export { MenuOptions } from "./components/MenuOptions";
 export { SearchBar } from "./components/SearchBar";
 export { Chat } from "./components/Chat";
 export { ProfilePicture } from "./components/ProfilePicture";
-export { TeamLogo } from "./components/TeamLogo";
 
 export { WagerText } from "./components/WagerText";
 

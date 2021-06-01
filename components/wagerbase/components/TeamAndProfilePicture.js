@@ -1,29 +1,26 @@
 import * as React from "react";
 import { View, Image, StyleSheet } from "react-native";
+import { default as getTeamLogo } from "../../NBALogos";
+import { ProfilePicture } from "./ProfilePicture";
 
-import { BOS } from "../../NBALogos"
-import { ProfilePicture } from "./ProfilePicture"
-
-export const TeamAndProfilePicture = () => {
+export const TeamAndProfilePicture = ({ url, icon }) => {
   return (
     <View style={styles.container}>
-        <View style={styles.profilePicture}>
-          <ProfilePicture url="https://pbs.twimg.com/profile_images/1392449626972827648/3gnqc9PE_x96.jpg" size="large" />
-        </View>
-        <View style={styles.teamLogo}>
-          <BOS/>
-        </View>
+      <View style={styles.profilePicture}>
+        <ProfilePicture url={url} size="small" />
+      </View>
+      <View style={styles.teamLogo}>{getTeamLogo(icon)}</View>
     </View>
-  )
-}
+  );
+};
 
-const styles = StyleSheet.create ({
+const styles = StyleSheet.create({
   container: {
     display: "flex",
     flexDirection: "row",
   },
   teamLogo: {
-    marginLeft: "-10%",
-    paddingTop: "5%"
-  }
-})
+    marginLeft: "-30%",
+    // paddingTop: "5%"
+  },
+});

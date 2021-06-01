@@ -19,7 +19,7 @@ export const Game = ({ teams, date, title }) => {
       <View style={styles.gameTeamsContainer}>
         <View style={styles.game}>
           <View style={styles.gameLogo}>
-            <TeamAndProfilePicture/>
+            {/* <TeamAndProfilePicture/> */}
           </View>
           <View style={styles.teamName}>
             <WagerText type="regular">
