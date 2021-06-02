@@ -18,6 +18,14 @@ const styles = StyleSheet.create({
     borderTopLeftRadius: 50,
     borderTopRightRadius: 50,
   },
+  medium: {
+    width: 55,
+    height: 55,
+    borderBottomRightRadius: 50,
+    borderBottomLeftRadius: 50,
+    borderTopLeftRadius: 50,
+    borderTopRightRadius: 50,
+  },
   small: {
     width: 50,
     height: 50,

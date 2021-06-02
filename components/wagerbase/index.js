@@ -16,6 +16,8 @@ export { MenuOptions } from "./components/MenuOptions";
 export { SearchBar } from "./components/SearchBar";
 export { Chat } from "./components/Chat";
 export { ProfilePicture } from "./components/ProfilePicture";
+export { InviteFriends } from "./components/InviteFriends";
+export { FriendBubble } from "./components/FriendBubble";
 
 export { WagerText } from "./components/WagerText";
 

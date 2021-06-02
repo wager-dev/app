@@ -4,26 +4,27 @@ import { View, Text, StyleSheet } from "react-native";
 import { Colors } from "../util";
 import { WagerText } from "../";
 import { Entypo } from '@expo/vector-icons';
+import { ProfilePicture } from "./ProfilePicture";
 
 export const Chat = ({ profileImage, name, lastMessage, time }) => {
   return (
     <View style={styles.container}>
       <View style={styles.profilePicture}>
-        <Entypo name="circle" size={50} color="white" />
+        <ProfilePicture url={profileImage} size="medium" />
       </View>
       <View style={styles.messageContents}>
         <View style={styles.userName}>
-          <WagerText type="bold">Charles</WagerText>
+          <WagerText type="bold">{name}</WagerText>
         </View>
         <View style={styles.messageTimestamp}>
           <View style={styles.lastMessage}>
-            <WagerText type="regular">This game tho</WagerText>
+            <WagerText type="regular">{lastMessage}</WagerText>
           </View>
           <View style={styles.bufferDot}>
             <Entypo name="dot-single" size={14} color="white" />
           </View>
           <View style={styles.timeStamp}>
-            <WagerText type="regular">3:30 pm</WagerText>
+            <WagerText type="regular">{time}</WagerText>
           </View>
         </View>
       </View>
@@ -39,8 +40,8 @@ const styles = StyleSheet.create ({
     justifyContent: "flex-start",
     alignItems: "center",
     width: 348,
-    marginTop: 20,
-    marginBottom: 20,
+    marginTop: 12,
+    marginBottom: 12,
   },
   profilePicture: {
     paddingRight: 20
