@@ -18,6 +18,7 @@ export { Chat } from "./components/Chat";
 export { ProfilePicture } from "./components/ProfilePicture";
 export { InviteFriends } from "./components/InviteFriends";
 export { FriendBubble } from "./components/FriendBubble";
+export { SentMessage } from "./components/SentMessage"; 
 
 export { WagerText } from "./components/WagerText";
 

@@ -1,5 +1,5 @@
 import * as React from "react";
-import { View, ScrollView, StyleSheet, Image, Text } from "react-native";
+import { View, ScrollView, StyleSheet, Image, Text, Pressable } from "react-native";
 import Header from "./Header";
 
 import { WagerText } from "./wagerbase";
@@ -8,7 +8,14 @@ import { Chat } from "./wagerbase";
 import { InviteFriends } from "./wagerbase";
 import { FriendBubble } from "./wagerbase";
 
+import { Colors } from '../components/wagerbase/util/Colors';
+
 function Chats({ navigation }) {
+
+  const onPressHandler = () => {
+    navigation.navigate("Chat Details")
+  }
+
   return (
     <View
       style={{
@@ -41,18 +48,19 @@ function Chats({ navigation }) {
             </View>
           </View>
           <View style={styles.chat}>
-            {messageCards.map((chat) => (
-              <Chat 
-                key={chat.id}
-                profileImage={chat.profileImage}
-                name={chat.name}
-                lastMessage={chat.lastMessage}
-                time={chat.time}
-                />
-            ))}
+              {messageCards.map((chat) => (
+                <Pressable onPress={onPressHandler} style={({ pressed }) => ({ backgroundColor: pressed ? "#241f1e" : '#ffffff00'})}>
+                  <Chat 
+                    key={chat.id}
+                    profileImage={chat.profileImage}
+                    name={chat.name}
+                    lastMessage={chat.lastMessage}
+                    time={chat.time}
+                    />
+                  </Pressable>
+              ))}
           </View>
         </View>
-        <View style={styles.container}></View>
       </ScrollView>
     </View>
   );
