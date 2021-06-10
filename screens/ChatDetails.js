@@ -1,8 +1,8 @@
 import * as React from "react";
 import { View, Text, ScrollView, StyleSheet } from "react-native";
 
-import { WagerText } from "../components/wagerbase"
-import { SentMessage } from "../components/wagerbase"
+import { WagerText } from "../components/wagerbase";
+import { MessageSent } from "../components/wagerbase";
  
 function chatDetails() {
   return (
@@ -20,14 +20,36 @@ function chatDetails() {
               Today at 7:20 pm
             </WagerText>
           </View>
-          <View style={Styles.sentMessage}>
-            <SentMessage />
+          <View style={Styles.outgoing}>
+            {transcript.map((message) => (
+              <MessageSent 
+                key={message.id}
+                message={message.message}
+                incoming={message.incoming}
+              />
+            ))}
           </View>
         </View>
       </ScrollView>
     </View>
   )
 }
+
+const transcript = [
+  {
+    id: 1,
+    message: "Hey, you seeing this game?",
+  },
+  {
+    id: 2,
+    message: "Yeah, I called it!",
+    incoming: true
+  },
+  {
+    id: 3,
+    message: "Not over yet tho!",
+  }
+]
 
 const Styles = StyleSheet.create({
   container: {
@@ -38,6 +60,7 @@ const Styles = StyleSheet.create({
   dateTime: {
     margin: 10
   },
+
 })
 
 export default chatDetails
