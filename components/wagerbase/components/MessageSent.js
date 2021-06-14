@@ -7,21 +7,21 @@ import { WagerText } from "..";
 export const MessageSent = ({message, incoming}) => {
   if (incoming) {
     return (
-      <View style={styles.incoming}>
-        <View>
-          <WagerText type="regular" style={styles.messageContent}>
-            <Text>{message}</Text>
-          </WagerText>
+      <View style={{alignItems: "flex-end"}}>
+        <View style={styles.incoming}>
+            <WagerText type="regular" style={styles.messageContent}>
+              <Text>{message}</Text>
+            </WagerText>
         </View>
       </View>
     );
   } else {
     return (
-      <View style={styles.outgoing}>
-        <View>
-          <WagerText type="regular" style={styles.messageContent}>
-            <Text>{message}</Text>
-          </WagerText>
+      <View style={{alignItems: "flex-start"}}>
+        <View style={styles.outgoing}>
+            <WagerText type="regular" style={styles.messageContent}>
+              <Text>{message}</Text>
+            </WagerText>
         </View>
       </View>
     );
@@ -34,7 +34,9 @@ const styles = StyleSheet.create({
     borderBottomLeftRadius: 20,
     borderTopRightRadius: 20,
     borderTopLeftRadius: 20,
-    maxWidth: "50%"
+    maxWidth: "50%",
+    alignItems: "flex-start",
+    marginTop: 15
   },
   messageContent: {
       fontSize: 20,
@@ -49,6 +51,8 @@ const styles = StyleSheet.create({
     borderBottomLeftRadius: 20,
     borderBottomRightRadius: 20,
     borderTopRightRadius: 20,
-    maxWidth: "50%"
+    maxWidth: "50%",
+    alignItems: "flex-end",
+    marginTop: 15
   },
 });

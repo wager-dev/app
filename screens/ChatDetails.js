@@ -3,6 +3,8 @@ import { View, Text, ScrollView, StyleSheet } from "react-native";
 
 import { WagerText } from "../components/wagerbase";
 import { MessageSent } from "../components/wagerbase";
+import { TypeSpace } from "../components/wagerbase";
+
  
 function chatDetails() {
   return (
@@ -15,19 +17,24 @@ function chatDetails() {
     >
       <ScrollView>
         <View style={Styles.container}>
-          <View style={Styles.dateTime}>
-            <WagerText type="bold">
-              Today at 7:20 pm
-            </WagerText>
+          <View style={Styles.top}>
+            <View style={Styles.dateTime}>
+              <WagerText type="bold">
+                Today at 7:20 pm
+              </WagerText>
+            </View>
+            <View style={Styles.messages}>
+              {transcript.map((message) => (
+                <MessageSent 
+                  key={message.id}
+                  message={message.message}
+                  incoming={message.incoming}
+                />
+              ))}
+            </View>
           </View>
-          <View style={Styles.outgoing}>
-            {transcript.map((message) => (
-              <MessageSent 
-                key={message.id}
-                message={message.message}
-                incoming={message.incoming}
-              />
-            ))}
+          <View style={Styles.typeSpace}>
+            <TypeSpace />
           </View>
         </View>
       </ScrollView>
@@ -55,12 +62,23 @@ const Styles = StyleSheet.create({
   container: {
     display: "flex",
     flexDirection: "column",
-    alignItems: "center",
   },
   dateTime: {
     margin: 10
   },
-
+  typeSpace: {
+    width: "100%",
+  },
+  messages: {
+    width: "92%",
+  },
+  top: {
+    width: "100%",
+    height: 573,
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center"
+  }
 })
 
 export default chatDetails

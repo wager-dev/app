@@ -19,6 +19,7 @@ export { ProfilePicture } from "./components/ProfilePicture";
 export { InviteFriends } from "./components/InviteFriends";
 export { FriendBubble } from "./components/FriendBubble";
 export { MessageSent } from "./components/MessageSent";
+export { TypeSpace } from "./components/TypeSpace";
 
 export { WagerText } from "./components/WagerText";
 

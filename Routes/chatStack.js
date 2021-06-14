@@ -14,7 +14,7 @@ export default () => (
           headerShown: false 
         }}
       />
-      <ChatStack.Screen name="Chat Details" component={ ChatDetails } 
+      <ChatStack.Screen name="Chat Details" component={ ChatDetails }  
         options={{
           title: '',
           headerStyle: {
