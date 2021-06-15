@@ -3,20 +3,18 @@ import { View, Text, Image, StyleSheet } from "react-native";
 import { WagerText } from '../'
 
 import { FontAwesome5 } from '@expo/vector-icons';
-import { Colors } from "../util";
+import { Colors, numberToThousand } from "../util";
 
 export const Potential = ({ potentialTokenAmount }) => {
-  const displayPotential = (input) => {
-    return input > 1000 ? `${input / 1000}k` : input;
-  };
   return (
       <View style={styles.container}>
         <View style={styles.icon}>
-          <FontAwesome5 name="handshake" size={15} color="white" />
+          {/* <FontAwesome5 name="handshake" size={15} color="white" /> */}
+          <Text style={{fontSize: 18}} >🤑</Text>
         </View>
         <View style={styles.amount}>
           <WagerText type="bold">
-            Potential: {displayPotential(potentialTokenAmount)}
+            Potential: {numberToThousand(potentialTokenAmount)}
           </WagerText>
         </View>
       </View>
@@ -27,7 +25,7 @@ const styles = StyleSheet.create({
   container: {
     display: "flex",
     flexDirection: "row",
-    justifyContent: "flex-end"
+    // justifyContent: "flex-end",
   },
   icon: {
     display: "flex",
@@ -51,10 +49,9 @@ const styles = StyleSheet.create({
   },
   amount: {
     backgroundColor: Colors.grey.light,
-    width: "90%",
-    maxWidth: 155,
     height: 30,
     paddingLeft: 10,
+    paddingRight: 10,
     borderTopRightRadius: 20,
     borderBottomRightRadius: 20
   },

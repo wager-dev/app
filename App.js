@@ -14,6 +14,7 @@ import Wagers from "./components/Wagers";
 import Results from "./components/Results";
 import Chats from "./components/Chats";
 import Me from "./components/Me";
+import ChatStack from "./Routes/chatStack";
 
 import { Colors } from "./components/wagerbase";
 
@@ -118,7 +119,7 @@ function App() {
             />
             <Tab.Screen name="Wagers" component={Wagers} />
             <Tab.Screen name="Results" component={Results} />
-            <Tab.Screen name="Chats" component={Chats} />
+            <Tab.Screen name="Chats" component={ChatStack} />
             <Tab.Screen name="Me" component={Me} />
           </Tab.Navigator>
         </NavigationContainer>
