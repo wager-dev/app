@@ -15,7 +15,7 @@ const Header = () => {
         padding: 0,
         paddingTop: 40,
         paddingBottom: 10,
-        backgroundColor: Colors.grey.dark, // TODO: make color global value
+        backgroundColor: Colors.grey.dark,
       }}
     >
       <View style={{ width: "60%", paddingLeft: 20, order: 1, justifyContent: "flex-end" }}>
