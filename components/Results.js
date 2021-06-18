@@ -5,13 +5,14 @@ import Header from "./Header";
 import { WagerText } from "./wagerbase";
 import { TimeFilter } from "./wagerbase";
 import { WagerResults } from "./wagerbase";
+import { Colors } from '../components/wagerbase/util';
  
 function Results({ navigation }) {
   return (
     <View
       style={{
         flexDirection: "column",
-        backgroundColor: "#606060",
+        backgroundColor: Colors.grey.background,
         height: "100%",
       }}
     >

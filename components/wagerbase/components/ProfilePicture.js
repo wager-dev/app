@@ -1,5 +1,6 @@
 import * as React from "react";
 import { View, Image, StyleSheet } from "react-native";
+import { Colors } from "../util";
 
 export const ProfilePicture = ({ url, size }) => {
   return (
@@ -17,6 +18,8 @@ const styles = StyleSheet.create({
     borderBottomLeftRadius: 50,
     borderTopLeftRadius: 50,
     borderTopRightRadius: 50,
+    borderColor: Colors.orange.light,
+    borderWidth: 3
   },
   medium: {
     width: 55,
