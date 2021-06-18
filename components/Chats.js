@@ -1,5 +1,5 @@
 import * as React from "react";
-import { View, ScrollView, StyleSheet, Image, Text, Pressable } from "react-native";
+import { View, ScrollView, StyleSheet, Image, Text, Pressable, TouchableOpacity } from "react-native";
 import Header from "./Header";
 
 import { WagerText } from "./wagerbase";
@@ -8,7 +8,7 @@ import { Chat } from "./wagerbase";
 import { InviteFriends } from "./wagerbase";
 import { FriendBubble } from "./wagerbase";
 
-import { Colors } from '../components/wagerbase/util/Colors';
+import { Colors } from '../components/wagerbase/util';
 
 function Chats({ navigation }) {
 
@@ -20,7 +20,7 @@ function Chats({ navigation }) {
     <View
       style={{
         flexDirection: "column",
-        backgroundColor: "#606060",
+        backgroundColor: Colors.grey.background,
         height: "100%",
       }}
     >
@@ -49,15 +49,18 @@ function Chats({ navigation }) {
           </View>
           <View style={styles.chat}>
               {messageCards.map((chat) => (
-                <Pressable onPress={onPressHandler} style={({ pressed }) => ({ backgroundColor: pressed ? "#241f1e" : '#ffffff00'})}>
+                <TouchableOpacity 
+                  activeOpacity={0.5}
+                  onPress={onPressHandler}
+                >
                   <Chat 
                     key={chat.id}
                     profileImage={chat.profileImage}
                     name={chat.name}
                     lastMessage={chat.lastMessage}
                     time={chat.time}
-                    />
-                  </Pressable>
+                  />
+                </TouchableOpacity>
               ))}
           </View>
         </View>

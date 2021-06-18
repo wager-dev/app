@@ -1,18 +1,19 @@
 import * as React from "react";
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, TextInput } from "react-native";
 
 import { Colors } from "../util";
 import { WagerText } from "..";
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
+
 export const TypeSpace = ({message, incoming}) => {
   return (
     <View style={styles.container}>
-      <View style={styles.type}>
-          <WagerText type="regular" style={styles.placeholder}>
-            Enter Message
-          </WagerText>
-      </View>
+      <TextInput 
+        style={styles.type}
+        placeholderTextColor={Colors.white}
+        placeholder="Message"
+      />
       <View style={styles.send}>
         <MaterialCommunityIcons name="send-circle" size={30} color={Colors.white} />
       </View>
@@ -38,10 +39,13 @@ const styles = StyleSheet.create({
     flexDirection: "column",
     alignItems: "flex-start",
     justifyContent: "center",
-    borderBottomLeftRadius: 15,
-    borderBottomRightRadius: 15,
-    borderTopLeftRadius: 15,
-    borderTopRightRadius: 15,
+    borderBottomLeftRadius: 10,
+    borderBottomRightRadius: 10,
+    borderTopLeftRadius: 10,
+    borderTopRightRadius: 10,
+    paddingLeft: 10,
+    color: Colors.white,
+    fontSize: 20
   },
   placeholder: {
     paddingLeft: 8,

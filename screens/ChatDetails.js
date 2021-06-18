@@ -1,44 +1,49 @@
 import * as React from "react";
-import { View, Text, ScrollView, StyleSheet } from "react-native";
+import { View, ScrollView, StyleSheet, KeyboardAvoidingView } from "react-native";
 
 import { WagerText } from "../components/wagerbase";
 import { MessageSent } from "../components/wagerbase";
 import { TypeSpace } from "../components/wagerbase";
+import { Header } from "react-navigation-stack"
+
 
  
 function chatDetails() {
   return (
-    <View
-      style={{
-        flexDirection: "column",
-        backgroundColor: "#606060",
-        height: "100%",
-      }}
+    <KeyboardAvoidingView 
+      behavior="height"
+      keyboardVerticalOffset = {Header.HEIGHT + 0}
     >
-      <ScrollView>
-        <View style={Styles.container}>
-          <View style={Styles.top}>
-            <View style={Styles.dateTime}>
-              <WagerText type="bold">
-                Today at 7:20 pm
-              </WagerText>
-            </View>
-            <View style={Styles.messages}>
-              {transcript.map((message) => (
-                <MessageSent 
-                  key={message.id}
-                  message={message.message}
-                  incoming={message.incoming}
-                />
-              ))}
-            </View>
+        <View
+          style={{
+            flexDirection: "column",
+            backgroundColor: "#606060",
+            height: "100%",
+          }}
+        >
+        <ScrollView>
+          <View style={Styles.container}>
+              <View style={Styles.dateTime}>
+                <WagerText type="bold">
+                  Today at 7:20 pm
+                </WagerText>
+              </View>
+              <View style={Styles.messages}>
+                {transcript.map((message) => (
+                  <MessageSent 
+                    key={message.id}
+                    message={message.message}
+                    incoming={message.incoming}
+                  />
+                ))}
+              </View>
           </View>
-          <View style={Styles.typeSpace}>
-            <TypeSpace />
-          </View>
+        </ScrollView>
+        <View style={Styles.typeSpace}>
+          <TypeSpace />
         </View>
-      </ScrollView>
-    </View>
+      </View>
+    </KeyboardAvoidingView>
   )
 }
 
@@ -62,6 +67,8 @@ const Styles = StyleSheet.create({
   container: {
     display: "flex",
     flexDirection: "column",
+    width: "100%",
+    alignItems: "center",
   },
   dateTime: {
     margin: 10
@@ -72,13 +79,6 @@ const Styles = StyleSheet.create({
   messages: {
     width: "92%",
   },
-  top: {
-    width: "100%",
-    height: 573,
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center"
-  }
 })
 
 export default chatDetails

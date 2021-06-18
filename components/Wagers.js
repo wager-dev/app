@@ -1,5 +1,5 @@
 import * as React from "react";
-import { View, ScrollView, StyleSheet } from "react-native";
+import { View, ScrollView, StyleSheet, Pressable, Button, TouchableOpacity } from "react-native";
 import Header from "./Header";
 
 import { Pending } from "./wagerbase";
@@ -9,13 +9,14 @@ import { WagerText } from "./wagerbase";
 import { WagerCard } from "./wagerbase";
 
 import { WAGERS } from "../data/wagers";
+import { Colors } from '../components/wagerbase/util';
 
 function Wagers({ navigation }) {
   return (
     <View
       style={{
         flexDirection: "column",
-        backgroundColor: "#606060",
+        backgroundColor: Colors.grey.background,
         height: "100%",
       }}
     >
@@ -36,9 +37,9 @@ function Wagers({ navigation }) {
           <WagerFilters status="Pending" />
         </View>
         <View style={styles.cards}>
-          {WAGERS.map((wager) => {
-            return <WagerCard key={wager.id} wager={wager} />;
-          })}
+          {WAGERS.map((wager) => (
+              <WagerCard key={wager.id} wager={wager} />
+          ))}
         </View>
       </View>
     </View>

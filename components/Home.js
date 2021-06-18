@@ -1,5 +1,5 @@
 import * as React from "react";
-import { View, ScrollView, StyleSheet, Image } from "react-native";
+import { View, ScrollView, StyleSheet, Image, Pressable, TouchableOpacity } from "react-native";
 import Header from "./Header";
 
 import { WagerText } from "./wagerbase";
@@ -7,13 +7,18 @@ import { Offers } from "./wagerbase";
 import { Icon } from "./wagerbase";
 import { Game } from "./wagerbase";
 import { TeamAndProfilePicture } from "./wagerbase";
+import { Colors } from '../components/wagerbase/util';
 
 function Home({ navigation }) {
+  const onPressHandler = () => {
+    navigation.navigate('New Wager')
+  }
+
   return (
     <View
       style={{
         flexDirection: "column",
-        backgroundColor: "#606060",
+        backgroundColor: Colors.grey.background,
         height: "100%",
       }}
       >
@@ -29,12 +34,17 @@ function Home({ navigation }) {
             <Icon type="NFL" />
           </View> */}
           {games.map((game) => (
-            <Game
-              key={game.id}
-              teams={game.teams}
-              date={game.date}
-              title={game.title}
-            />
+            <TouchableOpacity 
+              activeOpacity={0.5}
+              onPress={onPressHandler}
+            >
+              <Game
+                key={game.id}
+                teams={game.teams}
+                date={game.date}
+                title={game.title}
+              />
+            </TouchableOpacity>
           ))}
         </View>
       </ScrollView>
