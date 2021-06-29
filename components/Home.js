@@ -11,7 +11,7 @@ import { Colors } from '../components/wagerbase/util';
 
 function Home({ navigation }) {
   const onPressHandler = () => {
-    navigation.navigate('New Wager')
+    // navigation.navigate('New Wager')
   }
 
   return (
@@ -25,18 +25,11 @@ function Home({ navigation }) {
       <Header />
       <ScrollView>
         <View style={styles.container}>
-          <Offers requests="8" />
-          <View style={styles.titleText}>
-            <WagerText type="title">Create New Wager</WagerText>
-          </View>
-          {/* <View style={styles.chooseIcons}>
-            <Icon type="NBA" selected />
-            <Icon type="NFL" />
-          </View> */}
           {games.map((game) => (
             <TouchableOpacity 
               activeOpacity={0.5}
               onPress={onPressHandler}
+              style={styles.touchable}
             >
               <Game
                 key={game.id}
@@ -55,7 +48,7 @@ function Home({ navigation }) {
 const games = [
   {
     id: "001",
-    title: "NBA: Philadelphia 76ers at Boston Celtics",
+    title: "NBA: Philadelphia @ Boston",
     teams: [
       {
         id: "PHI",
@@ -71,13 +64,13 @@ const games = [
       },
     ],
     date: {
-      day: "3/16",
+      day: " Sun 3/16",
       time: "8pm",
     },
   },
   {
     id: "002",
-    title: "NBA: Boston Celtics at LA Lakers",
+    title: "NBA: Boston @ LA",
     teams: [
       {
         id: "BOS",
@@ -93,13 +86,13 @@ const games = [
       },
     ],
     date: {
-      day: "5/17",
+      day: "Thurs 5/17",
       time: "2pm",
     },
   },
   {
     id: "003",
-    title: "NBA: Boston Celtics at LA Lakers",
+    title: "NBA: Boston @ LA",
     teams: [
       {
         id: "BOS",
@@ -115,7 +108,7 @@ const games = [
       },
     ],
     date: {
-      day: "5/17",
+      day: " Fri 5/17",
       time: "2pm",
     },
   },
@@ -135,6 +128,12 @@ const styles = StyleSheet.create({
     display: "flex",
     flexDirection: "row",
   },
+  touchable: {
+    display: "flex",
+    width: "100%",
+    flexDirection: "column",
+    alignItems: "center",
+  }
 });
 
 export default Home;
