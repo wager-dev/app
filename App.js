@@ -116,7 +116,7 @@ function App() {
             <Tab.Screen
               name="Home"
               component={NewWagerStack}
-              // options={{ tabBarBadge: 3 }}
+              // options={{ tabBarBadge: 3 }} blah blah
             />
             <Tab.Screen name="Wagers" component={Wagers} />
             <Tab.Screen name="Results" component={Results} />
