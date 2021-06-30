@@ -1,5 +1,5 @@
 import * as React from "react";
-import { View, ScrollView, StyleSheet, Image } from "react-native";
+import { View, ScrollView, StyleSheet, Image, Pressable, TouchableOpacity } from "react-native";
 import Header from "./Header";
 
 import { WagerText } from "./wagerbase";
@@ -7,34 +7,37 @@ import { Offers } from "./wagerbase";
 import { Icon } from "./wagerbase";
 import { Game } from "./wagerbase";
 import { TeamAndProfilePicture } from "./wagerbase";
+import { Colors } from '../components/wagerbase/util';
 
 function Home({ navigation }) {
+  const onPressHandler = () => {
+    // navigation.navigate('New Wager')
+  }
+
   return (
     <View
       style={{
         flexDirection: "column",
-        backgroundColor: "#606060",
+        backgroundColor: Colors.grey.background,
         height: "100%",
       }}
       >
       <Header />
       <ScrollView>
         <View style={styles.container}>
-          <Offers requests="8" />
-          <View style={styles.titleText}>
-            <WagerText type="title">Create New Wager</WagerText>
-          </View>
-          {/* <View style={styles.chooseIcons}>
-            <Icon type="NBA" selected />
-            <Icon type="NFL" />
-          </View> */}
           {games.map((game) => (
-            <Game
-              key={game.id}
-              teams={game.teams}
-              date={game.date}
-              title={game.title}
-            />
+            <TouchableOpacity 
+              activeOpacity={0.5}
+              onPress={onPressHandler}
+              style={styles.touchable}
+            >
+              <Game
+                key={game.id}
+                teams={game.teams}
+                date={game.date}
+                title={game.title}
+              />
+            </TouchableOpacity>
           ))}
         </View>
       </ScrollView>
@@ -45,7 +48,7 @@ function Home({ navigation }) {
 const games = [
   {
     id: "001",
-    title: "NBA: Philadelphia 76ers at Boston Celtics",
+    title: "NBA: Philadelphia @ Boston",
     teams: [
       {
         id: "PHI",
@@ -61,13 +64,13 @@ const games = [
       },
     ],
     date: {
-      day: "3/16",
+      day: " Sun 3/16",
       time: "8pm",
     },
   },
   {
     id: "002",
-    title: "NBA: Boston Celtics at LA Lakers",
+    title: "NBA: Boston @ LA",
     teams: [
       {
         id: "BOS",
@@ -83,13 +86,13 @@ const games = [
       },
     ],
     date: {
-      day: "5/17",
+      day: "Thurs 5/17",
       time: "2pm",
     },
   },
   {
     id: "003",
-    title: "NBA: Boston Celtics at LA Lakers",
+    title: "NBA: Boston @ LA",
     teams: [
       {
         id: "BOS",
@@ -105,7 +108,7 @@ const games = [
       },
     ],
     date: {
-      day: "5/17",
+      day: " Fri 5/17",
       time: "2pm",
     },
   },
@@ -125,6 +128,12 @@ const styles = StyleSheet.create({
     display: "flex",
     flexDirection: "row",
   },
+  touchable: {
+    display: "flex",
+    width: "100%",
+    flexDirection: "column",
+    alignItems: "center",
+  }
 });
 
 export default Home;
