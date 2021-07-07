@@ -27,8 +27,8 @@ export const MenuOptions = ({icon, title, toggle}) => {
           {toggle ?
             <View style={style.toggle}>
               <Switch
-                trackColor={{ false: '#767577', true: '#81b0ff' }}
-                thumbColor={isEnabled ? '#f5dd4b' : '#f4f3f4'}
+                trackColor={{ false: '#767577', true: '#767577' }}
+                thumbColor={isEnabled ? "#F15B09" : '#f4f3f4'}
                 ios_backgroundColor="#3e3e3e"
                 onValueChange={toggleSwitch}
                 value={isEnabled}
@@ -46,30 +46,28 @@ export const MenuOptions = ({icon, title, toggle}) => {
 
 const style = StyleSheet.create({
   container: {
-    backgroundColor: Colors.grey.dark,
-    width: "90%",
+    backgroundColor: Colors.grey.background,
+    width: "105%",
     height: 60,
-    borderRadius: 10,
     display: "flex",
     flexDirection: "row",
-    margin: 5,
-    alignItems: "center"
+    alignItems: "center",
   },
   leftSideMenu: {
-    backgroundColor: Colors.grey.dark,
+    backgroundColor: Colors.grey.background,
     width: "80%",
-    height: 60,
+    height: 50,
     borderRadius: 10,
     display: "flex",
     flexDirection: "row",
     margin: 5,
-    alignItems: "center"
+    alignItems: "center",
   },
   iconText: {
     fontSize: 27,
   },
   icon: {
-    paddingLeft: 20,
+    paddingLeft: 9,
   },
   titleText: {
     fontSize: 19,
@@ -80,6 +78,12 @@ const style = StyleSheet.create({
   rightSideMenu: {
     width: "15%",
     display: "flex",
-    flexDirection: "row-reverse"
+    flexDirection: "row-reverse",
   },
+  arrows: {
+    paddingRight: 10
+  },
+  toggle: {
+    paddingRight: 10
+  }
 });

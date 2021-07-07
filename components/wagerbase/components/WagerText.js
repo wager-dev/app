@@ -1,8 +1,6 @@
 import * as React from "react";
 import { Text, StyleSheet } from "react-native";
-
 import { Colors } from "../util";
-
 import {
   useFonts,
   Ubuntu_300Light,
@@ -10,7 +8,6 @@ import {
   Ubuntu_500Medium,
   Ubuntu_700Bold,
 } from "@expo-google-fonts/ubuntu";
-
 export const WagerText = (props) => {
   let [fontsLoaded] = useFonts({
     Ubuntu_300Light,
@@ -18,7 +15,6 @@ export const WagerText = (props) => {
     Ubuntu_500Medium,
     Ubuntu_700Bold,
   });
-
   if (fontsLoaded) {
     switch (props.type) {
       case "title":
@@ -43,7 +39,6 @@ export const WagerText = (props) => {
   }
   return <Text {...props}>{props.children}</Text>;
 };
-
 const styles = StyleSheet.create({
   title: {
     color: Colors.white,

@@ -1,5 +1,5 @@
 import * as React from "react";
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 import { Ionicons } from '@expo/vector-icons';
 import { Entypo } from '@expo/vector-icons';
 
@@ -8,9 +8,12 @@ import { WagerText } from "../";
 
 export const FriendBubble = ({ name, profilePicture }) => {
   return (
-    <View style={styles.container}>
+    <TouchableOpacity
+      activeOpacity={0.5}
+      style={styles.container}
+    >
       <View style={styles.iconDot}>
-       <ProfilePicture url={ profilePicture } size="medium" />
+      <ProfilePicture url={ profilePicture } size="medium" />
         <View style={styles.dot}>
           <Entypo name="dot-single" size={40} color="#49FE02" />
         </View>
@@ -20,7 +23,7 @@ export const FriendBubble = ({ name, profilePicture }) => {
           {name}
         </WagerText>
       </View>
-    </View>
+    </TouchableOpacity>
   )
 };
 

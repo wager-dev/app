@@ -1,51 +1,33 @@
 import * as React from "react";
 import { View, Text, StyleSheet } from "react-native";
 import { Spread } from "./Spread";
-import { Feather } from "@expo/vector-icons";
-import { TeamAndProfilePicture } from "./TeamAndProfilePicture";
+import { default as getTeamLogo } from "../../NBALogos";
 
 import { Colors } from "../util";
 import { WagerText } from "../";
+import { block } from "react-native-reanimated";
 
 export const Game = ({ teams, date, title }) => {
   const homeTeam = teams.find((team) => team.home);
   const awayTeam = teams.find((team) => !team.home);
 
   return (
-    <View style={styles.gameContainer}>
-      <WagerText type="bold">
-        <Text style={styles.text}>{title}</Text>
-      </WagerText>
-      <View style={styles.gameTeamsContainer}>
-        <View style={styles.game}>
-          <View style={styles.gameLogo}>
-            {/* <TeamAndProfilePicture/> */}
-          </View>
-          <View style={styles.teamName}>
-            <WagerText type="regular">
-              <Text style={styles.teamText}>{homeTeam.name}</Text>
-            </WagerText>
-          </View>
+    <View style={styles.container}>
+      <WagerText type="regular">{title}</WagerText>
+      <View style={styles.content}>
+        <View style={styles.homeTeam}>
+          <View>{getTeamLogo({ big: true })}</View>
+          <WagerText type="regular" style={styles.teamName}>{homeTeam.name}</WagerText>
           <Spread value={homeTeam.spread} />
         </View>
-        <View style={styles.gameTime}>
-          <WagerText type="regular">
-            <View style={styles.centerText}>
-            <Text style={styles.text}>{date.day}</Text>
-            <Text style={styles.gameAtSign}>@</Text>
-            <Text style={styles.text}>{date.time}</Text>
-            </View>
-          </WagerText>
+        <View style={styles.schedule}>
+          <WagerText type="regular">{date.day}</WagerText>
+          <WagerText type="regular" style={styles.atSign}>@</WagerText>
+          <WagerText type="regular">{date.time}</WagerText>
         </View>
-        <View style={styles.gameTeam}>
-          <View style={styles.gameLogo}>
-            <Feather name="circle" size={40} color="white" />
-          </View>
-          <View style={styles.teamName}>
-            <WagerText type="regular">
-              <Text style={styles.teamText}>{awayTeam.name}</Text>
-            </WagerText>
-          </View>
+        <View style={styles.awayTeam}>
+          <View>{getTeamLogo({ big: true })}</View>
+          <WagerText type="regular" style={styles.teamName}>{awayTeam.name}</WagerText>
           <Spread value={awayTeam.spread} />
         </View>
       </View>
@@ -54,57 +36,46 @@ export const Game = ({ teams, date, title }) => {
 };
 
 const styles = StyleSheet.create({
-  gameContainer: {
+  container: {
+    display: "flex",
+    flexDirection: "column",
     marginTop: 20,
-    width: "90%",
-    maxWidth: 330,
-    padding: 20,
     borderRadius: 10,
     backgroundColor: Colors.grey.dark,
+    width: "90%",
+    padding: 10,
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+    elevation: 5,
   },
-  gameTeamsContainer: {
+  content: {
     display: "flex",
     flexDirection: "row",
+    justifyContent: "space-evenly",
+  },
+  homeTeam: {
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+  },
+  awayTeam: {
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+  },
+  schedule: {
+    display: "flex",
+    flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
+    padding: 10,
   },
-  gameTeam: {
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-  },
-  gameTime: {
-    width: 80,
-    paddingBottom: 18,
-    alignItems: "center"
-  },
-  gameAtSign: {
-    fontSize: 25,
-    fontWeight: "700",
-    color: Colors.orange.dark,
-    textAlign: "center",
-    paddingTop: 3,
-    paddingBottom: 3,
-  },
-  centerText: {
-    display: "flex",
-    flexDirection: "column",
-  },
-  text: {
-    color: "white",
-    textAlign: "center",
-    fontSize: 17,
-  },
-  teamName: {
-    paddingTop: 12,
-    paddingBottom: 12,
-  },
-  teamText: {
-    fontSize: 17,
-    textAlign: "center",
-  },
-  gameLogo: {
-    alignItems: "center",
-    paddingTop: 15,
+  atSign: {
+    color: Colors.orange.light,
   },
 });
