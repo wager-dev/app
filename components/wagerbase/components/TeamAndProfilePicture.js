@@ -9,7 +9,7 @@ export const TeamAndProfilePicture = ({ url, icon }) => {
       <View style={styles.profilePicture}>
         <ProfilePicture url={url} size="small" />
       </View>
-      <View style={styles.teamLogo}>{getTeamLogo(icon)}</View>
+      <View style={styles.teamLogo}>{getTeamLogo({ icon })}</View>
     </View>
   );
 };

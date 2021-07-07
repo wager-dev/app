@@ -61,7 +61,7 @@ function Me({ navigation }) {
   );
 }
 
-const menuOptions = [
+export const menuOptions = [
   {
     id: "002",
     title: "Notification",
@@ -104,7 +104,7 @@ const menuOptions = [
     icon: <SimpleLineIcons name="logout" size={24} color={Colors.white} />,
     toggle: false,
   },
-]
+];
 
 const style = StyleSheet.create({
   container: {

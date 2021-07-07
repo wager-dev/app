@@ -1,14 +1,14 @@
 import React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
 
-import Home from "../components/Home";
+import Create from "../components/Create";
 import NewWager from "../screens/NewWager";
 
 const NewWagerStack = createStackNavigator();
 
 export default () => (
   <NewWagerStack.Navigator>
-    <NewWagerStack.Screen name="Home" component={Home} 
+    <NewWagerStack.Screen name="Create" component={Create} 
       options={{
         title: '',
         headerShown: false

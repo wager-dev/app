@@ -63,7 +63,7 @@ const icons = {
   WAS: <WAS size="60" />,
 }
 
-export default ({big}) => {
+export default ({ big }) => {
   if (big) {
     return <BOS size="90" />
   }

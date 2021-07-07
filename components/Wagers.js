@@ -1,10 +1,20 @@
 import * as React from "react";
-import { View, ScrollView, StyleSheet, Pressable, Button, TouchableOpacity } from "react-native";
+import {
+  View,
+  ScrollView,
+  StyleSheet,
+  Pressable,
+  Button,
+  TouchableOpacity,
+} from "react-native";
 import Header from "./Header";
-import { WagerCard } from "./wagerbase";
+import { UpcomingWagerCard } from "./wagerbase";
+import { PendingWagerCard } from "./wagerbase";
+import { RequestWagerCard } from "./wagerbase";
+import { LiveWagerCard } from "./wagerbase";
 
 import { WAGERS } from "../data/wagers";
-import { Colors } from '../components/wagerbase/util';
+import { Colors } from "../components/wagerbase/util";
 
 function Wagers({ navigation }) {
   return (
@@ -16,13 +26,26 @@ function Wagers({ navigation }) {
       }}
     >
       <Header />
+      <ScrollView>
       <View style={styles.container}>
         <View style={styles.cardContainer}>
           {WAGERS.map((wager) => {
-            return <WagerCard key={wager.id} wager={wager} />;
+            {
+              switch (wager.type) {
+                case "live":
+                  return <LiveWagerCard key={wager.id} wager={wager} />;
+                case "pending":
+                  return <PendingWagerCard key={wager.id} wager={wager} />;
+                  case "request":
+                    return <RequestWagerCard key={wager.id} wager={wager} />;
+                default:
+                  return <UpcomingWagerCard key={wager.id} wager={wager} />;
+              }
+            }
           })}
         </View>
       </View>
+      </ScrollView>
     </View>
   );
 }

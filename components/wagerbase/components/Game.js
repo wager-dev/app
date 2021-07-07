@@ -15,20 +15,20 @@ export const Game = ({ teams, date, title }) => {
     <View style={styles.container}>
       <WagerText type="regular">{title}</WagerText>
       <View style={styles.content}>
-        <View style={styles.homeTeam}>
+      <View style={styles.awayTeam}>
           <View>{getTeamLogo({ big: true })}</View>
-          <WagerText type="regular" style={styles.teamName}>{homeTeam.name}</WagerText>
-          <Spread value={homeTeam.spread} />
+          <WagerText type="regular" style={styles.teamName}>{awayTeam.name}</WagerText>
+          <Spread value={awayTeam.spread} />
         </View>
         <View style={styles.schedule}>
           <WagerText type="regular">{date.day}</WagerText>
           <WagerText type="regular" style={styles.atSign}>@</WagerText>
           <WagerText type="regular">{date.time}</WagerText>
         </View>
-        <View style={styles.awayTeam}>
+        <View style={styles.homeTeam}>
           <View>{getTeamLogo({ big: true })}</View>
-          <WagerText type="regular" style={styles.teamName}>{awayTeam.name}</WagerText>
-          <Spread value={awayTeam.spread} />
+          <WagerText type="regular" style={styles.teamName}>{homeTeam.name}</WagerText>
+          <Spread value={homeTeam.spread} />
         </View>
       </View>
     </View>

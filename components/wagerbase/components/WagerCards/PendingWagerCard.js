@@ -1,11 +1,11 @@
 import * as React from "react";
 import { View, Text, StyleSheet } from "react-native";
-import { TeamAndProfilePicture } from "./TeamAndProfilePicture";
+import { TeamAndProfilePicture } from "../../";
 
-import { Colors } from "../util";
-import { WagerText } from "..";
+import { Colors } from "../../util";
+import { WagerText } from "../../";
 
-export const WagerCard = ({ wager }) => {
+export const PendingWagerCard = ({ wager }) => {
   return (
     <View style={styles.container}>
       <View style={styles.usersAndTeams}>
@@ -43,13 +43,9 @@ export const WagerCard = ({ wager }) => {
         </View>
       </View>
       <View style={styles.potentialAndStatus}>
-        <WagerText type="bold">
-          <Text>40K</Text>
-        </WagerText>
-        <WagerText type="regular">
-          <Text>To win 78K</Text>
-        </WagerText>
-        <WagerText>{/* <Text style={styles.status}>Live</Text> */}</WagerText>
+        <WagerText type="bold" style={styles.potentialText}> 40K </WagerText>
+        <WagerText type="regular" style={styles.potentialText}> To win 78K </WagerText>
+        {/* <WagerText><Text style={styles.status}>Live</Text></WagerText> */}
       </View>
     </View>
   );
@@ -71,6 +67,7 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.25,
     shadowRadius: 3.84,
     elevation: 5,
+    opacity: 0.4
   },
   usersAndTeams: {
     backgroundColor: Colors.grey.light,
@@ -94,7 +91,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   potentialAndStatus: {
-    backgroundColor: Colors.orange.light,
+    backgroundColor: Colors.white,
     height: 100,
     width: "20%",
     borderTopRightRadius: 20,
@@ -114,6 +111,8 @@ const styles = StyleSheet.create({
   atSign: {
     color: Colors.orange.light,
     lineHeight: 20,
-
   },
+  potentialText: {
+    color: Colors.grey.light,
+  }
 });

@@ -9,13 +9,13 @@ import Ionicons from "react-native-vector-icons/Ionicons";
 
 import { WagerLogo } from "./assets";
 
-import Home from "./components/Home";
+import Create from "./components/Create";
 import Wagers from "./components/Wagers";
 import Results from "./components/Results";
 import Chats from "./components/Chats";
 import Me from "./components/Me";
-import ChatStack from "./Routes/chatStack";
-import NewWagerStack from "./Routes/NewWagerStack";
+import ChatStack from "./routes/chatStack";
+import NewWagerStack from "./routes/NewWagerStack";
 
 import { Colors } from "./components/wagerbase";
 
@@ -83,11 +83,11 @@ function App() {
               tabBarIcon: ({ focused, color, size }) => {
                 let iconName;
 
-                if (route.name === "Home") {
+                if (route.name === "Wagers") {
                   iconName = "home-outline";
-                } else if (route.name === "Wagers") {
+                } else if (route.name === "Create") {
                   iconName = "log-out-outline";
-                } else if (route.name === "Results") {
+                } else if (route.name === "PLACEHOLDER") {
                   iconName = "trophy-outline";
                 } else if (route.name === "Chats") {
                   iconName = "chatbubbles-outline";
@@ -114,12 +114,12 @@ function App() {
             }}
           >
             <Tab.Screen
-              name="Home"
-              component={NewWagerStack}
+              name="Wagers"
+              component={Wagers}
               // options={{ tabBarBadge: 3 }} blah blah
             />
-            <Tab.Screen name="Wagers" component={Wagers} />
-            <Tab.Screen name="Results" component={Results} />
+            <Tab.Screen name="Create" component={Create} />
+            {/* <Tab.Screen name="PLACEHOLDER" component={Results} /> */}
             <Tab.Screen name="Chats" component={ChatStack} />
             <Tab.Screen name="Me" component={Me} />
           </Tab.Navigator>

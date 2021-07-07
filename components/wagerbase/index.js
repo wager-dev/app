@@ -1,8 +1,8 @@
 import { TimeFilter } from "./components/TimeFilter";
 
 export { Balance } from "./components/Balance";
-export { TeamAndProfilePicture } from "./components/TeamAndProfilePicture"
-export { Icon } from "./components/Icon"
+export { TeamAndProfilePicture } from "./components/TeamAndProfilePicture";
+export { Icon } from "./components/Icon";
 export { Spread } from "./components/Spread";
 export { Game } from "./components/Game";
 export { Offers } from "./components/Offers";
@@ -10,8 +10,7 @@ export { TimeFilter } from "./components/TimeFilter";
 export { WagerResults } from "./components/WagerResults";
 export { Pending } from "./components/Pending";
 export { Potential } from "./components/Potential";
-export { WagerFilters} from "./components/WagerFilters";
-export { WagerCard } from "./components/WagerCard";
+export { WagerFilters } from "./components/WagerFilters";
 export { MenuOptions } from "./components/MenuOptions";
 export { SearchBar } from "./components/SearchBar";
 export { Chat } from "./components/Chat";
@@ -20,6 +19,13 @@ export { InviteFriends } from "./components/InviteFriends";
 export { FriendBubble } from "./components/FriendBubble";
 export { MessageSent } from "./components/MessageSent";
 export { TypeSpace } from "./components/TypeSpace";
+
+export { UpcomingWagerCard } from "./components/WagerCards/UpcomingWagerCard";
+export { PendingWagerCard } from "./components/WagerCards/PendingWagerCard";
+export { RequestWagerCard } from "./components/WagerCards/RequestWagerCard";
+export { LiveWagerCard } from "./components/WagerCards/LiveWagerCard"; 
+
+export { NewWager } from "./components/NewWager";
 
 export { WagerText } from "./components/WagerText";
 

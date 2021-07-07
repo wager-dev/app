@@ -7,6 +7,8 @@ import { SearchBar } from "./wagerbase";
 import { Chat } from "./wagerbase";
 import { InviteFriends } from "./wagerbase";
 import { FriendBubble } from "./wagerbase";
+import { messageCards } from "../data/messageCards";
+import { onlineFriends } from "../data/onlineFriends";
 
 import { Colors } from '../components/wagerbase/util';
 
@@ -68,77 +70,6 @@ function Chats({ navigation }) {
     </View>
   );
 }
-
-const onlineFriends = [
-  {
-    id: 1,
-    name: "Carson",
-    image: "https://pbs.twimg.com/media/E2i-Y2cXwAU14ZJ.jpg"
-  },
-  {
-    id: 2,
-    name: "Cameron",
-    image: "https://pbs.twimg.com/profile_images/1323319645684797446/zviNjbfV.jpg"
-  },
-  {
-    id: 3,
-    name: "Christian",
-    image: "https://pbs.twimg.com/media/CirE5zkW0AECa5B.jpg"
-  },
-  {
-    id: 4,
-    name: "Riley",
-    image: "https://i.pinimg.com/236x/f8/a5/e7/f8a5e747e20ac95ba19b6fb9866cf0d4.jpg"
-  },
-  {
-    id: 5,
-    name: "Chris",
-    image: "https://content.fortune.com/wp-content/uploads/2015/12/gettyimages-477236666.jpg"
-  },
-  {
-    id: 6,
-    name: "Mike",
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFln_OrjgNcVpqkGdKFb0-5aY5Vsku6XO6tw&usqp=CAU"
-  },
-]
-
-const messageCards = [
-  {
-    id: 1,
-    profileImage: "https://pbs.twimg.com/profile_images/1392449626972827648/3gnqc9PE_x96.jpg",
-    name: "Charles",
-    lastMessage: "This game tho",
-    time: "3:30 pm",
-  },
-  {
-    id: 2,
-    profileImage: "https://i.pinimg.com/originals/b5/8b/6c/b58b6cd54cdaf9fbdc54480b4ebd4c53.png",
-    name: "Sarah",
-    lastMessage: "You: Lets gooooooo",
-    time: "Tuesday",
-  },
-  {
-    id: 3,
-    profileImage: "https://pbs.twimg.com/profile_images/540360256379826177/dYi9dN3B.jpeg",
-    name: "Nith",
-    lastMessage: "I cant believe this",
-    time: "Monday",
-  },
-  {
-    id: 4,
-    profileImage: "https://i.redd.it/fttviwctdc051.jpg",
-    name: "Erik",
-    lastMessage: "You: Told you",
-    time: "Sunday",
-  },
-  {
-    id: 5,
-    profileImage: "https://pbs.twimg.com/profile_images/413399766630813697/W5YWHEYd.jpeg",
-    name: "Alex",
-    lastMessage: "You: Cmon dude",
-    time: "April 12th",
-  }
-]
 
 const styles = StyleSheet.create({
   container: {
