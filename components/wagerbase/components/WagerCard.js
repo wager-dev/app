@@ -9,38 +9,38 @@ export const WagerCard = ({ wager }) => {
   return (
     <View style={styles.container}>
       <View style={styles.usersAndTeams}>
-        <WagerText type="regular">
-          <View style={styles.user}>
-            <TeamAndProfilePicture
-              url={wager.teams[0].user.profile}
-              icon={wager.teams[0].icon}
-            />
+        <View style={styles.user}>
+          <TeamAndProfilePicture
+            url={wager.teams[0].user.profile}
+            icon={wager.teams[0].icon}
+          />
+          <WagerText>
+            {wager.teams[0].name} {wager.teams[0].spread}
+          </WagerText>
+          {/* <WagerText>{wager.teams[0].user.name}</WagerText> */}
+        </View>
 
-            <Text style={styles.text}>
-              {wager.teams[0].name} {wager.teams[0].spread}
-            </Text>
-            <Text style={styles.name}>{wager.teams[0].user.name}</Text>
-          </View>
-        </WagerText>
-        <WagerText type="regular">
-          <View style={styles.dateTime}>
-            <Text style={styles.centerText}>{wager.date}</Text>
-            <Text style={styles.atSign}>@</Text>
-            <Text style={styles.centerText}>{wager.time}</Text>
-          </View>
-        </WagerText>
-        <WagerText type="regular">
-          <View style={styles.user}>
-            <TeamAndProfilePicture
-              url={wager.teams[1].user.profile}
-              icon={wager.teams[1].icon}
-            />
-            <Text style={styles.text}>
-              {wager.teams[1].name} {wager.teams[1].spread}
-            </Text>
-            <Text style={styles.name}>{wager.teams[1].user.name}</Text>
-          </View>
-        </WagerText>
+        <View style={styles.dateTime}>
+          <WagerText style={styles.centerText}>
+            {wager.date}
+          </WagerText>
+          <WagerText style={styles.atSign}>
+            @
+          </WagerText>
+          <WagerText style={styles.centerText}>
+            {wager.time}
+          </WagerText>
+        </View>
+        <View style={styles.user}>
+          <TeamAndProfilePicture
+            url={wager.teams[1].user.profile}
+            icon={wager.teams[1].icon}
+          />
+          <WagerText style={styles.text}>
+            {wager.teams[1].name} {wager.teams[1].spread}
+          </WagerText>
+          {/* <Text style={styles.name}>{wager.teams[1].user.name}</Text> */}
+        </View>
       </View>
       <View style={styles.potentialAndStatus}>
         <WagerText type="bold">
@@ -60,16 +60,22 @@ const styles = StyleSheet.create({
     marginTop: 20,
     display: "flex",
     flexDirection: "row",
-    borderWidth: 2,
-    borderColor: Colors.orange.light,
     borderTopRightRadius: 22,
     borderBottomRightRadius: 22,
     borderBottomLeftRadius: 22,
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+    elevation: 5,
   },
   usersAndTeams: {
     backgroundColor: Colors.grey.light,
     width: "80%",
-    height: 130,
+    // height: 130,
     borderBottomLeftRadius: 20,
     display: "flex",
     flexDirection: "row",
@@ -78,18 +84,18 @@ const styles = StyleSheet.create({
   },
   user: {
     width: 90,
-    paddingTop: 20,
+    // paddingTop: 20,
     alignItems: "center",
   },
   dateTime: {
     width: 80,
-    paddingBottom: 18,
-    paddingTop: 20,
+    // paddingBottom: 18,
+    // paddingTop: 20,
     alignItems: "center",
   },
   potentialAndStatus: {
     backgroundColor: Colors.orange.light,
-    height: 130,
+    height: 100,
     width: "20%",
     borderTopRightRadius: 20,
     borderBottomRightRadius: 20,
@@ -98,21 +104,16 @@ const styles = StyleSheet.create({
     display: "flex",
     flexDirection: "column",
   },
-  text: {
-    color: Colors.white,
-    fontSize: 18,
-  },
   name: {
     color: Colors.white,
     fontSize: 12,
   },
   centerText: {
     color: Colors.white,
-    fontSize: 15,
-    padding: 5,
   },
   atSign: {
     color: Colors.orange.light,
-    fontSize: 18,
+    lineHeight: 20,
+
   },
 });
