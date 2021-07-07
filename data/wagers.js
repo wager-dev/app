@@ -1,7 +1,7 @@
 export const WAGERS = [
   {
     id: 1,
-    date: "3/19",
+    date: "Thur 3/19",
     time: "7:30pm",
     wagered: 40000,
     toWin: 78000,
@@ -24,14 +24,14 @@ export const WAGERS = [
         user: {
           name: "Sarah",
           profile:
-            "https://pbs.twimg.com/profile_images/1356284638759710720/ELE4hRRQ_x96.jpg",
+            "https://pbs.twimg.com/profile_images/1375081784568860678/lMfjwn76_400x400.jpg",
         },
       },
     ],
   },
   {
     id: 2,
-    date: "3/21",
+    date: "Thur 3/21",
     time: "8:00pm",
     wagered: 20000,
     toWin: 38000,
@@ -54,7 +54,7 @@ export const WAGERS = [
         user: {
           name: "Charles",
           profile:
-            "https://pbs.twimg.com/profile_images/1356284638759710720/ELE4hRRQ_x96.jpg",
+            "https://pbs.twimg.com/profile_images/1375081784568860678/lMfjwn76_400x400.jpg",
         },
       },
     ],

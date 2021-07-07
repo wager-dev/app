@@ -1,11 +1,6 @@
 import * as React from "react";
 import { View, ScrollView, StyleSheet } from "react-native";
 import Header from "./Header";
-
-import { Pending } from "./wagerbase";
-import { Potential } from "./wagerbase";
-import { WagerFilters } from "./wagerbase";
-import { WagerText } from "./wagerbase";
 import { WagerCard } from "./wagerbase";
 
 import { WAGERS } from "../data/wagers";
@@ -20,22 +15,8 @@ function Wagers({ navigation }) {
       }}
     >
       <Header />
-      <View style={styles.titleText}>
-        <WagerText type="title">In Play</WagerText>
-      </View>
       <View style={styles.container}>
-        <View style={styles.pendingPotential}>
-          <Pending pendingTokenAmount={200000} />
-          <Potential potentialTokenAmount={428000} />
-        </View>
-      </View>
-      <View styles={styles.container}>
-        <View style={styles.timeFilters}>
-          <WagerFilters status="Live" selected />
-          <WagerFilters status="Accepted" />
-          <WagerFilters status="Pending" />
-        </View>
-        <View style={styles.cards}>
+        <View style={styles.cardContainer}>
           {WAGERS.map((wager) => {
             return <WagerCard key={wager.id} wager={wager} />;
           })}
@@ -48,33 +29,12 @@ function Wagers({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     display: "flex",
+    flexDirection: "column",
     alignItems: "center",
+    justifyContent: "space-between",
   },
-  titleText: {
-    marginTop: 10,
-  },
-  pendingPotential: {
-    display: "flex",
-    flexDirection: "row",
-    justifyContent: "space-around",
-    marginTop: 20,
-  },
-  titleText: {
-    paddingLeft: 20,
-    paddingTop: 10,
-  },
-  timeFilters: {
-    display: "flex",
-    flexDirection: "row",
-    justifyContent: "space-evenly",
-    alignItems: "center",
-    paddingLeft: 20,
-    paddingRight: 20,
-    paddingTop: 20,
-  },
-  cards: {
-    paddingLeft: 20,
-    paddingRight: 20,
+  cardContainer: {
+    width: "90%",
   },
 });
 

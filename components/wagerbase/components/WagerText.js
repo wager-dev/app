@@ -23,30 +23,25 @@ export const WagerText = (props) => {
     switch (props.type) {
       case "title":
         return (
-          <Text style={styles.title} {...props}>
-            {props.children}
+          <Text style={styles.title}>
+            <Text {...props}>{props.children}</Text>
           </Text>
         );
       case "bold":
         return (
-          <Text style={styles.bold} {...props}>
-            {props.children}
+          <Text style={styles.bold}>
+            <Text {...props}>{props.children}</Text>
           </Text>
         );
       default:
         return (
-          <Text style={styles.regular} {...props}>
-            {props.children}
+          <Text style={styles.regular}>
+            <Text {...props}>{props.children}</Text>
           </Text>
         );
     }
   }
-  return (
-    <Text {...props}>
-      Hello
-      {props.children}
-    </Text>
-  );
+  return <Text {...props}>{props.children}</Text>;
 };
 
 const styles = StyleSheet.create({
@@ -57,13 +52,12 @@ const styles = StyleSheet.create({
   },
   bold: {
     color: Colors.white,
-    lineHeight: 35,
     fontSize: 20,
     fontFamily: "Ubuntu_700Bold",
   },
   regular: {
     color: Colors.white,
-    fontSize: 12,
+    fontSize: 15,
     fontFamily: "Ubuntu_400Regular",
   },
 });
