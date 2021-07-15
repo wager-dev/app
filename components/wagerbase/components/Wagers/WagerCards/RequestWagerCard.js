@@ -1,11 +1,11 @@
 import * as React from "react";
-import { View, Text, StyleSheet } from "react-native";
-import { TeamAndProfilePicture } from "../../";
+import { View, StyleSheet } from "react-native";
 
-import { Colors } from "../../util";
-import { WagerText } from "../../";
+import { TeamAndProfilePicture } from "../../../";
+import { Colors } from "../../../util";
+import { WagerText } from "../../../";
 
-export const PendingWagerCard = ({ wager }) => {
+export const RequestWagerCard = ({ wager }) => {
   return (
     <View style={styles.container}>
       <View style={styles.usersAndTeams}>
@@ -17,19 +17,12 @@ export const PendingWagerCard = ({ wager }) => {
           <WagerText>
             {wager.teams[0].name} {wager.teams[0].spread}
           </WagerText>
-          {/* <WagerText>{wager.teams[0].user.name}</WagerText> */}
         </View>
 
         <View style={styles.dateTime}>
-          <WagerText style={styles.centerText}>
-            {wager.date}
-          </WagerText>
-          <WagerText style={styles.atSign}>
-            @
-          </WagerText>
-          <WagerText style={styles.centerText}>
-            {wager.time}
-          </WagerText>
+          <WagerText style={styles.centerText}>{wager.date}</WagerText>
+          <WagerText style={styles.atSign}>@</WagerText>
+          <WagerText style={styles.centerText}>{wager.time}</WagerText>
         </View>
         <View style={styles.user}>
           <TeamAndProfilePicture
@@ -39,13 +32,17 @@ export const PendingWagerCard = ({ wager }) => {
           <WagerText style={styles.text}>
             {wager.teams[1].name} {wager.teams[1].spread}
           </WagerText>
-          {/* <Text style={styles.name}>{wager.teams[1].user.name}</Text> */}
         </View>
       </View>
       <View style={styles.potentialAndStatus}>
-        <WagerText type="bold" style={styles.potentialText}> 40K </WagerText>
-        <WagerText type="regular" style={styles.potentialText}> To win 78K </WagerText>
-        {/* <WagerText><Text style={styles.status}>Live</Text></WagerText> */}
+        <WagerText type="bold" style={styles.potentialText}>
+          {" "}
+          40K{" "}
+        </WagerText>
+        <WagerText type="regular" style={styles.potentialText}>
+          {" "}
+          To win 78K{" "}
+        </WagerText>
       </View>
     </View>
   );
@@ -67,12 +64,12 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.25,
     shadowRadius: 3.84,
     elevation: 5,
-    opacity: 0.4
+    borderColor: Colors.orange.light,
+    borderWidth: 2,
   },
   usersAndTeams: {
     backgroundColor: Colors.grey.light,
     width: "80%",
-    // height: 130,
     borderBottomLeftRadius: 20,
     display: "flex",
     flexDirection: "row",
@@ -81,17 +78,14 @@ const styles = StyleSheet.create({
   },
   user: {
     width: 90,
-    // paddingTop: 20,
     alignItems: "center",
   },
   dateTime: {
     width: 80,
-    // paddingBottom: 18,
-    // paddingTop: 20,
     alignItems: "center",
   },
   potentialAndStatus: {
-    backgroundColor: Colors.white,
+    backgroundColor: Colors.grey.dark,
     height: 100,
     width: "20%",
     borderTopRightRadius: 20,
@@ -113,6 +107,6 @@ const styles = StyleSheet.create({
     lineHeight: 20,
   },
   potentialText: {
-    color: Colors.grey.light,
-  }
+    color: Colors.orange.light,
+  },
 });

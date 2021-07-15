@@ -8,19 +8,23 @@ const NewWagerStack = createStackNavigator();
 
 export default () => (
   <NewWagerStack.Navigator>
-    <NewWagerStack.Screen name="Create" component={Create} 
+    <NewWagerStack.Screen
+      name="Create"
+      component={Create}
       options={{
-        title: '',
-        headerShown: false
+        title: "",
+        headerShown: false,
       }}
     />
-    <NewWagerStack.Screen name="New Wager" component={NewWager} 
+    <NewWagerStack.Screen
+      name="New Wager"
+      component={NewWager}
       options={{
-        title: '',
+        title: "",
         headerStyle: {
-          backgroundColor: '#241f1e',
+          backgroundColor: "#241f1e",
         },
-        headerTintColor: 'white',
+        headerTintColor: "white",
       }}
     />
   </NewWagerStack.Navigator>

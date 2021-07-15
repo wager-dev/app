@@ -1,14 +1,20 @@
 import * as React from "react";
-import { View, ScrollView, StyleSheet, Image, TouchableOpacity } from "react-native";
-import Header from "./Header";
-import { default as getTeamLogo } from "./NBALogos"
+import {
+  View,
+  ScrollView,
+  StyleSheet,
+  Image,
+  TouchableOpacity,
+} from "react-native";
 
+import Header from "./Header";
+import { default as getTeamLogo } from "./NBALogos";
 import { WagerText } from "./wagerbase";
-import { Colors } from "./wagerbase"
-import { FriendBubble } from "./wagerbase"
-import { WAGERCOIN } from "./wagerbase/assets"
-import { onlineFriends } from "../data/wagers"
- 
+import { Colors } from "./wagerbase";
+import { FriendBubble } from "./wagerbase";
+import { WAGERCOIN } from "./wagerbase/assets";
+import { onlineFriends } from "../data/wagers";
+
 function Results({ navigation }) {
   return (
     <View
@@ -26,16 +32,14 @@ function Results({ navigation }) {
             <WagerText type="regular">Thursday, Sep 9 @ 8:20 pm EST</WagerText>
           </View>
           <View style={styles.teamsContainer}>
-            <WagerText type="regular">
-              pick your team
-            </WagerText>
+            <WagerText type="regular">pick your team</WagerText>
             <View style={styles.centeredText}>
               <View style={styles.homeTeam}>
                 <View>{getTeamLogo({ big: true })}</View>
                 <WagerText type="regular">Celtics</WagerText>
               </View>
               <View style={styles.teamsText}>
-                <WagerText type="regular" style={styles.atSymbol}> 
+                <WagerText type="regular" style={styles.atSymbol}>
                   @
                 </WagerText>
               </View>
@@ -46,37 +50,33 @@ function Results({ navigation }) {
             </View>
           </View>
           <View style={styles.opponentsContainer}>
-            <WagerText type="regular">
-              Pick your opponent
-            </WagerText>
+            <WagerText type="regular">Pick your opponent</WagerText>
             <View style={styles.opponentBubbles}>
               {onlineFriends.map((friend) => (
-                <FriendBubble 
+                <FriendBubble
                   key={friend.id}
                   name={friend.name}
                   profilePicture={friend.image}
-                  />
+                />
               ))}
             </View>
           </View>
           <View style={styles.amountContainer}>
             <View style={styles.amountText}>
-              <WagerText type="regular">
-                pick your amount
-              </WagerText>
+              <WagerText type="regular">pick your amount</WagerText>
             </View>
             <View style={styles.amountImages}>
-              <Image style={styles.image} source={WAGERCOIN}/>
-              <Image style={styles.image} source={WAGERCOIN}/>
-              <Image style={styles.image} source={WAGERCOIN}/>
-              <Image style={styles.image} source={WAGERCOIN}/>
-              <Image style={styles.image} source={WAGERCOIN}/>
+              <Image style={styles.image} source={WAGERCOIN} />
+              <Image style={styles.image} source={WAGERCOIN} />
+              <Image style={styles.image} source={WAGERCOIN} />
+              <Image style={styles.image} source={WAGERCOIN} />
+              <Image style={styles.image} source={WAGERCOIN} />
             </View>
-            <TouchableOpacity
-              activeOpacity={0.5}
-              >
+            <TouchableOpacity activeOpacity={0.5}>
               <View style={styles.wagerButton}>
-                <WagerText type="regular" style={styles.wagerText}>Wager!</WagerText>
+                <WagerText type="regular" style={styles.wagerText}>
+                  Wager!
+                </WagerText>
               </View>
             </TouchableOpacity>
           </View>
@@ -89,12 +89,12 @@ function Results({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     display: "flex",
-    flexDirection: "column"
+    flexDirection: "column",
   },
   titleText: {
     paddingLeft: 20,
     paddingTop: 20,
-    paddingBottom: 20
+    paddingBottom: 20,
   },
   teamsContainer: {
     borderColor: Colors.white,
@@ -104,7 +104,7 @@ const styles = StyleSheet.create({
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    justifyContent: "space-evenly"
+    justifyContent: "space-evenly",
   },
   teamsText: {
     display: "flex",
@@ -115,17 +115,17 @@ const styles = StyleSheet.create({
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    paddingRight: 35
+    paddingRight: 35,
   },
   awayTeam: {
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    paddingLeft: 35
+    paddingLeft: 35,
   },
   atSymbol: {
     color: Colors.orange.light,
-    fontSize: 25
+    fontSize: 25,
   },
   opponentsContainer: {
     display: "flex",
@@ -145,7 +145,7 @@ const styles = StyleSheet.create({
     display: "flex",
     flexDirection: "row",
     alignItems: "center",
-    justifyContent: "space-between"
+    justifyContent: "space-between",
   },
   image: {
     width: 40,
@@ -155,7 +155,7 @@ const styles = StyleSheet.create({
     display: "flex",
     flexDirection: "row",
     padding: 30,
-    justifyContent: "space-between"
+    justifyContent: "space-between",
   },
   amountContainer: {
     display: "flex",
@@ -163,7 +163,7 @@ const styles = StyleSheet.create({
   },
   amountText: {
     alignItems: "center",
-    paddingTop: 20
+    paddingTop: 20,
   },
   wagerButton: {
     backgroundColor: Colors.orange.light,
@@ -172,8 +172,8 @@ const styles = StyleSheet.create({
     padding: 5,
   },
   wagerText: {
-    fontSize: 30
-  }
+    fontSize: 30,
+  },
 });
 
 export default Results;

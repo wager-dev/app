@@ -1,24 +1,15 @@
 import * as React from "react";
-import {
-  View,
-  StyleSheet,
-  Image,
-  Text,
-  TouchableOpacity,
-  TouchableWithoutFeedback,
-} from "react-native";
+import { View, StyleSheet, Image, TouchableOpacity } from "react-native";
 
 import { useNavigation } from "@react-navigation/native";
 import { ScrollView } from "react-native-gesture-handler";
 import { AntDesign } from "@expo/vector-icons";
-
-import { default as getTeamLogo } from "../../NBALogos";
-import { WagerText } from "../../wagerbase";
-import { Colors } from "../../wagerbase/util";
-import { FriendBubble } from "../../wagerbase";
-import { WAGERCOIN } from "../../wagerbase/assets";
-
-import { FRIENDS, AMOUNTS } from "../../../data";
+import { default as getTeamLogo } from "../../../NBALogos";
+import { WagerText } from "../../index";
+import { Colors } from "../../util";
+import { FriendBubble } from "../..";
+import { WAGERCOIN } from "../../assets";
+import { FRIENDS, AMOUNTS } from "../../../../data";
 
 export const NewWager = ({ game, setShowModal }) => {
   const { title, teams } = game;

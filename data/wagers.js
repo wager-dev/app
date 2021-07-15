@@ -16,7 +16,7 @@ export const WAGERS = [
         user: {
           name: "Me",
           profile:
-          "https://pbs.twimg.com/profile_images/1392449626972827648/3gnqc9PE_x96.jpg",
+            "https://pbs.twimg.com/profile_images/1392449626972827648/3gnqc9PE_x96.jpg",
         },
       },
       {
@@ -26,7 +26,7 @@ export const WAGERS = [
         user: {
           name: "Sarah",
           profile:
-          "https://pbs.twimg.com/profile_images/1375081784568860678/lMfjwn76_400x400.jpg",
+            "https://pbs.twimg.com/profile_images/1375081784568860678/lMfjwn76_400x400.jpg",
         },
       },
     ],
@@ -109,7 +109,7 @@ export const WAGERS = [
         user: {
           name: "Me",
           profile:
-          "https://pbs.twimg.com/profile_images/1392449626972827648/3gnqc9PE_x96.jpg",
+            "https://pbs.twimg.com/profile_images/1392449626972827648/3gnqc9PE_x96.jpg",
         },
       },
       {
@@ -119,7 +119,7 @@ export const WAGERS = [
         user: {
           name: "Sarah",
           profile:
-          "https://pbs.twimg.com/profile_images/1375081784568860678/lMfjwn76_400x400.jpg",
+            "https://pbs.twimg.com/profile_images/1375081784568860678/lMfjwn76_400x400.jpg",
         },
       },
     ],

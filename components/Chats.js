@@ -1,7 +1,7 @@
 import * as React from "react";
-import { View, ScrollView, StyleSheet, Image, Text, Pressable, TouchableOpacity } from "react-native";
-import Header from "./Header";
+import { View, ScrollView, StyleSheet, TouchableOpacity } from "react-native";
 
+import Header from "./Header";
 import { WagerText } from "./wagerbase";
 import { SearchBar } from "./wagerbase";
 import { Chat } from "./wagerbase";
@@ -9,14 +9,12 @@ import { InviteFriends } from "./wagerbase";
 import { FriendBubble } from "./wagerbase";
 import { messageCards } from "../data/messageCards";
 import { onlineFriends } from "../data/onlineFriends";
-
-import { Colors } from '../components/wagerbase/util';
+import { Colors } from "../components/wagerbase/util";
 
 function Chats({ navigation }) {
-
   const onPressHandler = () => {
-    navigation.navigate("Chat Details")
-  }
+    navigation.navigate("Chat Details");
+  };
 
   return (
     <View
@@ -33,37 +31,34 @@ function Chats({ navigation }) {
         </View>
         <View style={styles.container}>
           <View style={styles.searchBar}>
-            <SearchBar/>
+            <SearchBar />
           </View>
           <View style={styles.friendInvites}>
             <View style={styles.inviteFriends}>
-              <InviteFriends/>
+              <InviteFriends />
             </View>
             <View style={styles.friendBubbles}>
               {onlineFriends.map((friend) => (
-                <FriendBubble 
+                <FriendBubble
                   key={friend.id}
                   name={friend.name}
                   profilePicture={friend.image}
-                  />
+                />
               ))}
             </View>
           </View>
           <View style={styles.chat}>
-              {messageCards.map((chat) => (
-                <TouchableOpacity 
-                  activeOpacity={0.5}
-                  onPress={onPressHandler}
-                >
-                  <Chat 
-                    key={chat.id}
-                    profileImage={chat.profileImage}
-                    name={chat.name}
-                    lastMessage={chat.lastMessage}
-                    time={chat.time}
-                  />
-                </TouchableOpacity>
-              ))}
+            {messageCards.map((chat) => (
+              <TouchableOpacity activeOpacity={0.5} onPress={onPressHandler}>
+                <Chat
+                  key={chat.id}
+                  profileImage={chat.profileImage}
+                  name={chat.name}
+                  lastMessage={chat.lastMessage}
+                  time={chat.time}
+                />
+              </TouchableOpacity>
+            ))}
           </View>
         </View>
       </ScrollView>
@@ -98,7 +93,6 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
     padding: 10,
-
   },
   inviteFriends: {
     paddingTop: 20,
