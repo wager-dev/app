@@ -1,20 +1,18 @@
 import * as React from "react";
-import { View, Text, StyleSheet } from "react-native";
+import { View, StyleSheet } from "react-native";
 
-import { Colors } from "../util";
-import { WagerText } from "../";
-import { EvilIcons } from '@expo/vector-icons';
+import { Colors } from "../../util";
+import { WagerText } from "../..";
+import { EvilIcons } from "@expo/vector-icons";
 
-export const SearchBar = ({ value }) => {
+export const SearchBar = () => {
   return (
     <View style={styles.container}>
       <View style={styles.icon}>
         <EvilIcons name="search" size={24} color="white" />
       </View>
       <View style={styles.text}>
-        <WagerText type="bold">
-          <Text>Search</Text>
-        </WagerText>
+        <WagerText type="bold"> Search </WagerText>
       </View>
     </View>
   );
@@ -36,9 +34,9 @@ const styles = StyleSheet.create({
     borderTopRightRadius: 20,
   },
   icon: {
-    paddingLeft: 13
+    paddingLeft: 13,
   },
   text: {
     paddingLeft: 15,
-  }
-})
+  },
+});

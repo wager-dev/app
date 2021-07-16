@@ -1,24 +1,26 @@
 import * as React from "react";
-import { View, Text, StyleSheet, TextInput } from "react-native";
+import { View, StyleSheet, TextInput } from "react-native";
 
-import { Colors } from "../util";
-import { WagerText } from "..";
-import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { Colors } from "../../util";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
 
-
-export const TypeSpace = ({message, incoming}) => {
+export const TypeSpace = ({ message, incoming }) => {
   return (
     <View style={styles.container}>
-      <TextInput 
+      <TextInput
         style={styles.type}
         placeholderTextColor={Colors.white}
         placeholder="Message"
       />
       <View style={styles.send}>
-        <MaterialCommunityIcons name="send-circle" size={30} color={Colors.white} />
+        <MaterialCommunityIcons
+          name="send-circle"
+          size={30}
+          color={Colors.white}
+        />
       </View>
     </View>
-  )
+  );
 };
 
 const styles = StyleSheet.create({
@@ -45,7 +47,7 @@ const styles = StyleSheet.create({
     borderTopRightRadius: 10,
     paddingLeft: 10,
     color: Colors.white,
-    fontSize: 20
+    fontSize: 20,
   },
   placeholder: {
     paddingLeft: 8,

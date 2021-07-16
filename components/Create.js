@@ -3,19 +3,15 @@ import {
   View,
   ScrollView,
   StyleSheet,
-  Text,
   Modal,
   TouchableOpacity,
   TouchableWithoutFeedback,
 } from "react-native";
+
 import { BlurView } from "expo-blur";
 import Header from "./Header";
-
-import { NewWager, WagerText } from "./wagerbase";
-import { Offers } from "./wagerbase";
-import { Icon } from "./wagerbase";
+import { NewWager } from "./wagerbase";
 import { Game } from "./wagerbase";
-import { TeamAndProfilePicture } from "./wagerbase";
 import { Colors } from "./wagerbase/util";
 import { games } from "../data/games";
 

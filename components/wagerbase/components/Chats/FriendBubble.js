@@ -1,16 +1,15 @@
 import * as React from "react";
-import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
-import { Ionicons } from "@expo/vector-icons";
-import { Entypo } from "@expo/vector-icons";
+import { View, StyleSheet } from "react-native";
 
-import { ProfilePicture } from "./ProfilePicture";
-import { WagerText } from "../";
+import { Entypo } from "@expo/vector-icons";
+import { ProfilePicture } from "../MultiUse/ProfilePicture";
+import { WagerText } from "../..";
 
 export const FriendBubble = ({ name, profilePicture, picked }) => {
   return (
     <View style={styles.container}>
       <View style={styles.iconDot}>
-        <ProfilePicture url={profilePicture} size="medium" outlined={picked}/>
+        <ProfilePicture url={profilePicture} size="medium" outlined={picked} />
         <View style={styles.dot}>
           <Entypo name="dot-single" size={40} color="#49FE02" />
         </View>

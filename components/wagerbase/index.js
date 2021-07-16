@@ -1,33 +1,24 @@
-import { TimeFilter } from "./components/TimeFilter";
+export { Balance } from "./components/Header/Balance";
+export { TeamAndProfilePicture } from "./components/CreateWager/TeamAndProfilePicture";
+export { Spread } from "./components/MultiUse/Spread";
+export { Game } from "./components/CreateWager/Game";
+export { MenuOptions } from "./components/Settings/MenuOptions";
+export { SearchBar } from "./components/Chats/SearchBar";
+export { Chat } from "./components/Chats/Chat";
+export { ProfilePicture } from "./components/MultiUse/ProfilePicture";
+export { InviteFriends } from "./components/Chats/InviteFriends";
+export { FriendBubble } from "./components/Chats/FriendBubble";
+export { MessageSent } from "./components/Chats/MessageSent";
+export { TypeSpace } from "./components/Chats/TypeSpace";
 
-export { Balance } from "./components/Balance";
-export { TeamAndProfilePicture } from "./components/TeamAndProfilePicture";
-export { Icon } from "./components/Icon";
-export { Spread } from "./components/Spread";
-export { Game } from "./components/Game";
-export { Offers } from "./components/Offers";
-export { TimeFilter } from "./components/TimeFilter";
-export { WagerResults } from "./components/WagerResults";
-export { Pending } from "./components/Pending";
-export { Potential } from "./components/Potential";
-export { WagerFilters } from "./components/WagerFilters";
-export { MenuOptions } from "./components/MenuOptions";
-export { SearchBar } from "./components/SearchBar";
-export { Chat } from "./components/Chat";
-export { ProfilePicture } from "./components/ProfilePicture";
-export { InviteFriends } from "./components/InviteFriends";
-export { FriendBubble } from "./components/FriendBubble";
-export { MessageSent } from "./components/MessageSent";
-export { TypeSpace } from "./components/TypeSpace";
+export { UpcomingWagerCard } from "./components/Wagers/WagerCards/UpcomingWagerCard";
+export { PendingWagerCard } from "./components/Wagers/WagerCards/PendingWagerCard";
+export { RequestWagerCard } from "./components/Wagers/WagerCards/RequestWagerCard";
+export { LiveWagerCard } from "./components/Wagers/WagerCards/LiveWagerCard";
 
-export { UpcomingWagerCard } from "./components/WagerCards/UpcomingWagerCard";
-export { PendingWagerCard } from "./components/WagerCards/PendingWagerCard";
-export { RequestWagerCard } from "./components/WagerCards/RequestWagerCard";
-export { LiveWagerCard } from "./components/WagerCards/LiveWagerCard"; 
+export { NewWager } from "./components/CreateWager/NewWager";
 
-export { NewWager } from "./components/NewWager";
-
-export { WagerText } from "./components/WagerText";
+export { WagerText } from "./components/MultiUse/WagerText";
 
 export { Colors } from "./util";
 export { WAGERCOIN } from "./assets";

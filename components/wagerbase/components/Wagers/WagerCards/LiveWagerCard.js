@@ -1,16 +1,10 @@
 import * as React from "react";
-import { View, Text, StyleSheet, ImageBackground, Image } from "react-native";
-import { TeamAndProfilePicture } from "../../";
+import { View, StyleSheet, ImageBackground } from "react-native";
 
-import { Colors } from "../../util";
-import { WagerText } from "../../";
-import { Entypo } from "@expo/vector-icons";
-
-import { STADIUM } from "../../assets";
-
-// const image = {
-//   uri: "https://www.musco.com/wp-content/uploads/2019/03/sycamores_1200x600.jpg"
-// };
+import { TeamAndProfilePicture } from "../../../";
+import { Colors } from "../../../util";
+import { WagerText } from "../../../";
+import { STADIUM } from "../../../assets";
 
 export const LiveWagerCard = ({ wager }) => {
   return (
@@ -25,7 +19,6 @@ export const LiveWagerCard = ({ wager }) => {
             <WagerText>
               {wager.teams[0].name} {wager.teams[0].spread}
             </WagerText>
-            {/* <WagerText>{wager.teams[0].user.name}</WagerText> */}
           </View>
 
           <View style={styles.dateTime}>
@@ -41,7 +34,6 @@ export const LiveWagerCard = ({ wager }) => {
             <WagerText style={styles.text}>
               {wager.teams[1].name} {wager.teams[1].spread}
             </WagerText>
-            {/* <Text style={styles.name}>{wager.teams[1].user.name}</Text> */}
           </View>
         </View>
       </ImageBackground>
@@ -54,7 +46,6 @@ export const LiveWagerCard = ({ wager }) => {
           {" "}
           To win 78K{" "}
         </WagerText>
-        {/* <WagerText><Text style={styles.status}>Live</Text></WagerText> */}
       </View>
     </View>
   );

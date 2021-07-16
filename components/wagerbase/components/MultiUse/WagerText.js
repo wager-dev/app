@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Text, StyleSheet } from "react-native";
-import { Colors } from "../util";
+import { Colors } from "../../util";
 import {
   useFonts,
   Ubuntu_300Light,

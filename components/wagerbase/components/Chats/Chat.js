@@ -1,10 +1,9 @@
 import * as React from "react";
-import { View, Text, StyleSheet } from "react-native";
+import { View, StyleSheet } from "react-native";
 
-import { Colors } from "../util";
-import { WagerText } from "../";
-import { Entypo } from '@expo/vector-icons';
-import { ProfilePicture } from "./ProfilePicture";
+import { WagerText } from "../..";
+import { Entypo } from "@expo/vector-icons";
+import { ProfilePicture } from "../MultiUse/ProfilePicture";
 
 export const Chat = ({ profileImage, name, lastMessage, time }) => {
   return (
@@ -29,11 +28,10 @@ export const Chat = ({ profileImage, name, lastMessage, time }) => {
         </View>
       </View>
     </View>
-    
   );
 };
 
-const styles = StyleSheet.create ({
+const styles = StyleSheet.create({
   container: {
     display: "flex",
     flexDirection: "row",
@@ -44,10 +42,10 @@ const styles = StyleSheet.create ({
     marginBottom: 12,
   },
   profilePicture: {
-    paddingRight: 20
+    paddingRight: 20,
   },
   messageTimestamp: {
     display: "flex",
-    flexDirection: "row"
+    flexDirection: "row",
   },
-})
+});

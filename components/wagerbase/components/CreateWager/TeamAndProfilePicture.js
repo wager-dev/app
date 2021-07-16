@@ -1,7 +1,7 @@
 import * as React from "react";
-import { View, Image, StyleSheet } from "react-native";
-import { default as getTeamLogo } from "../../NBALogos";
-import { ProfilePicture } from "./ProfilePicture";
+import { View, StyleSheet } from "react-native";
+import { default as getTeamLogo } from "../../../NBALogos";
+import { ProfilePicture } from "../MultiUse/ProfilePicture";
 
 export const TeamAndProfilePicture = ({ url, icon }) => {
   return (
@@ -21,6 +21,5 @@ const styles = StyleSheet.create({
   },
   teamLogo: {
     marginLeft: "-30%",
-    // paddingTop: "5%"
   },
 });

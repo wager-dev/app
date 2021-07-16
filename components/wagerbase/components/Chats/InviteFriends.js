@@ -1,23 +1,19 @@
 import * as React from "react";
-import { View, Text, StyleSheet } from "react-native";
-import { Feather } from '@expo/vector-icons';
+import { View, StyleSheet } from "react-native";
 
-import { WagerText } from "../";
+import { Feather } from "@expo/vector-icons";
+import { WagerText } from "../..";
 
 export const InviteFriends = () => {
   return (
     <View style={styles.container}>
       <Feather name="plus-circle" size={50} color="white" />
       <View style={styles.text}>
-        <WagerText type="regular">
-          Invite
-        </WagerText>
-        <WagerText type="regular">
-          Friend
-        </WagerText>
+        <WagerText type="regular"> Invite </WagerText>
+        <WagerText type="regular"> Friend </WagerText>
       </View>
     </View>
-  )
+  );
 };
 
 const styles = StyleSheet.create({
@@ -29,6 +25,6 @@ const styles = StyleSheet.create({
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    paddingTop: 3
-  }
-})
+    paddingTop: 3,
+  },
+});

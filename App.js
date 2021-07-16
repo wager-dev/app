@@ -14,8 +14,7 @@ import Wagers from "./components/Wagers";
 import Results from "./components/Results";
 import Chats from "./components/Chats";
 import Me from "./components/Me";
-import ChatStack from "./routes/chatStack";
-import NewWagerStack from "./routes/NewWagerStack";
+import ChatStack from "./Routes/chatStack";
 
 import { Colors } from "./components/wagerbase";
 
@@ -51,14 +50,13 @@ function App() {
             style={{ width: 200, height: 44 }}
             onPress={async () => {
               try {
-                const returnedCredential = await AppleAuthentication.signInAsync(
-                  {
+                const returnedCredential =
+                  await AppleAuthentication.signInAsync({
                     requestedScopes: [
                       AppleAuthentication.AppleAuthenticationScope.FULL_NAME,
                       AppleAuthentication.AppleAuthenticationScope.EMAIL,
                     ],
-                  }
-                );
+                  });
                 updateCredential(returnedCredential);
                 // signed in
               } catch (e) {

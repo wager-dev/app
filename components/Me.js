@@ -1,19 +1,23 @@
 import * as React from "react";
-import { View, ScrollView, Text, StyleSheet, TouchableOpacity } from "react-native";
-
+import {
+  View,
+  ScrollView,
+  Text,
+  StyleSheet,
+  TouchableOpacity,
+} from "react-native";
 
 import { WagerText } from "./wagerbase";
 import { MenuOptions } from "./wagerbase";
-import { ProfilePicture } from './wagerbase'
-import { MaterialIcons } from '@expo/vector-icons';
-import { Colors } from '../components/wagerbase/util';
-
-import { Feather } from '@expo/vector-icons';
-import { Ionicons } from '@expo/vector-icons';
-import { Entypo } from '@expo/vector-icons';
-import { FontAwesome5 } from '@expo/vector-icons';
-import { SimpleLineIcons } from '@expo/vector-icons';
-import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { ProfilePicture } from "./wagerbase";
+import { MaterialIcons } from "@expo/vector-icons";
+import { Colors } from "../components/wagerbase/util";
+import { Feather } from "@expo/vector-icons";
+import { Ionicons } from "@expo/vector-icons";
+import { Entypo } from "@expo/vector-icons";
+import { FontAwesome5 } from "@expo/vector-icons";
+import { SimpleLineIcons } from "@expo/vector-icons";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
 
 function Me({ navigation }) {
   return (
@@ -28,7 +32,10 @@ function Me({ navigation }) {
         <View style={style.container}>
           <View style={style.profileInfo}>
             <View style={style.profilePicture}>
-              <ProfilePicture url="https://pbs.twimg.com/profile_images/1232464654099570689/FmeL-VEG.jpg" size="large" />
+              <ProfilePicture
+                url="https://pbs.twimg.com/profile_images/1232464654099570689/FmeL-VEG.jpg"
+                size="large"
+              />
             </View>
             <View style={style.nameAndTag}>
               <View>
@@ -41,19 +48,17 @@ function Me({ navigation }) {
                   <Text style={style.tag}>@petermoses32</Text>
                 </WagerText>
               </View>
+            </View>
           </View>
-        </View>
-        {menuOptions.map((option) => (
-          <TouchableOpacity 
-            activeOpacity={0.5}
-          >
-            <MenuOptions
-              key={option.id}
-              icon={option.icon}
-              title={option.title}
-              toggle={option.toggle}
-            />
-          </TouchableOpacity>
+          {menuOptions.map((option) => (
+            <TouchableOpacity activeOpacity={0.5}>
+              <MenuOptions
+                key={option.id}
+                icon={option.icon}
+                title={option.title}
+                toggle={option.toggle}
+              />
+            </TouchableOpacity>
           ))}
         </View>
       </ScrollView>
@@ -95,7 +100,9 @@ export const menuOptions = [
   {
     id: "010",
     title: "Tools",
-    icon: <MaterialCommunityIcons name="tools" size={24} color={Colors.white} />,
+    icon: (
+      <MaterialCommunityIcons name="tools" size={24} color={Colors.white} />
+    ),
     toggle: false,
   },
   {
@@ -127,31 +134,31 @@ const style = StyleSheet.create({
     flexDirection: "row",
     width: "56%",
     justifyContent: "space-between",
-    alignItems: "center"
+    alignItems: "center",
   },
   titleText: {
-    fontSize: 18
+    fontSize: 18,
   },
   nameAndTag: {
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
-    padding: 10
+    padding: 10,
   },
   name: {
-    fontSize: 25
+    fontSize: 25,
   },
   tag: {
-    fontSize: 18
+    fontSize: 18,
   },
   profileInfo: {
     display: "flex",
     flexDirection: "row",
     width: "100%",
     paddingLeft: 10,
-    marginBottom: 15
-  }
+    marginBottom: 15,
+  },
 });
 
 export default Me;

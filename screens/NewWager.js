@@ -1,6 +1,6 @@
 import * as React from "react";
 import { View, Text, ScrollView, StyleSheet } from "react-native";
-import { Colors } from "../components/wagerbase"
+import { Colors } from "../components/wagerbase";
 
 function NewWager() {
   return (
@@ -10,9 +10,8 @@ function NewWager() {
         backgroundColor: Colors.grey.background,
         height: "100%",
       }}
-    >
-    </View>
-  )
+    ></View>
+  );
 }
 
-export default NewWager
+export default NewWager;

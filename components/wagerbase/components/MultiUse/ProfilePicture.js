@@ -1,6 +1,6 @@
 import * as React from "react";
 import { View, Image, StyleSheet } from "react-native";
-import { Colors } from "../util";
+import { Colors } from "../../util";
 
 export const ProfilePicture = ({ url, size, outlined }) => {
   return (
@@ -8,7 +8,10 @@ export const ProfilePicture = ({ url, size, outlined }) => {
       {!outlined ? (
         <Image source={{ uri: url }} style={styles[size]} />
       ) : (
-        <Image source={{ uri: url }} style={{...styles[size], ...styles.outlined}} />
+        <Image
+          source={{ uri: url }}
+          style={{ ...styles[size], ...styles.outlined }}
+        />
       )}
     </View>
   );
@@ -49,6 +52,6 @@ const styles = StyleSheet.create({
     borderTopLeftRadius: 50,
     borderTopRightRadius: 50,
     borderWidth: 1,
-    borderColor: Colors.orange.dark
-  }
+    borderColor: Colors.orange.dark,
+  },
 });
