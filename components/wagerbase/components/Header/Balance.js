@@ -1,5 +1,5 @@
 import * as React from "react";
-import { View, Image, StyleSheet } from "react-native";
+import { View, Image, StyleSheet, Text } from "react-native";
 
 import { WagerText } from "../../index";
 import { Colors } from "../../util";
@@ -12,11 +12,11 @@ export const Balance = ({ tokenAmount }) => {
   return (
     <View style={styles.container}>
       <View style={styles.icon}>
-        <Image style={styles.image} source={WAGERCOIN} />
+        <Text style={{ fontSize: 20 }}>💰</Text>
       </View>
       <View style={styles.amount}>
         <WagerText type="bold">
-          Balance: {displayBalance(tokenAmount)}
+          {displayBalance(tokenAmount)}
         </WagerText>
       </View>
     </View>
@@ -53,10 +53,34 @@ const styles = StyleSheet.create({
     height: 23,
   },
   amount: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "flex-start",
     backgroundColor: Colors.orange.dark,
     width: "90%",
-    maxWidth: 150,
+    maxWidth: 80,
     height: 30,
     paddingLeft: 10,
+  },
+  pending: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "flex-start",
+    backgroundColor: Colors.orange.dark,
+    height: 30,
+    paddingLeft: 10,
+  },
+  potential: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "flex-start",
+    backgroundColor: Colors.orange.dark,
+    height: 30,
+    padding: 10,
+    paddingBottom: 0,
+    paddingTop: 0,
+    borderTopRightRadius: 20,
+    borderBottomRightRadius: 20,
+    marginRight: 20,
   },
 });

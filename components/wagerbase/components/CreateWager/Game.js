@@ -12,7 +12,7 @@ export const Game = ({ teams, date, title }) => {
 
   return (
     <View style={styles.container}>
-      <WagerText type="regular">{title}</WagerText>
+      <WagerText type="regular" style={{textAlign: "center"}}>{title}</WagerText>
       <View style={styles.content}>
         <View style={styles.awayTeam}>
           <View>{getTeamLogo({ big: true })}</View>

@@ -14,7 +14,7 @@ import Wagers from "./components/Wagers";
 import Results from "./components/Results";
 import Chats from "./components/Chats";
 import Me from "./components/Me";
-import ChatStack from "./Routes/chatStack";
+import ChatStack from "./routes/chatStack";
 
 import { Colors } from "./components/wagerbase";
 
