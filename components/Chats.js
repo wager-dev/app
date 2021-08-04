@@ -27,7 +27,7 @@ function Chats({ navigation }) {
       <Header />
       <ScrollView>
         <View style={styles.title}>
-          <WagerText type="title">Chat</WagerText>
+          <WagerText type="bold">Chat</WagerText>
         </View>
         <View style={styles.container}>
           <View style={styles.searchBar}>

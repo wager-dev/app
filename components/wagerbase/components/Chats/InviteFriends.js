@@ -9,8 +9,7 @@ export const InviteFriends = () => {
     <View style={styles.container}>
       <Feather name="plus-circle" size={50} color="white" />
       <View style={styles.text}>
-        <WagerText type="regular"> Invite </WagerText>
-        <WagerText type="regular"> Friend </WagerText>
+        <WagerText type="regular"> Invite Friend</WagerText>
       </View>
     </View>
   );
@@ -19,6 +18,7 @@ export const InviteFriends = () => {
 const styles = StyleSheet.create({
   container: {
     width: 50,
+    marginRight: -10
   },
 
   text: {

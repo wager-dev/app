@@ -27,7 +27,7 @@ function chatDetails() {
         <ScrollView>
           <View style={Styles.container}>
             <View style={Styles.dateTime}>
-              <WagerText type="bold">Today at 7:20 pm</WagerText>
+              <WagerText type="regular">Today at 7:20 pm</WagerText>
             </View>
             <View style={Styles.messages}>
               {transcript.map((message) => (

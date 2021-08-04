@@ -9,7 +9,7 @@ export const FriendBubble = ({ name, profilePicture, picked }) => {
   return (
     <View style={styles.container}>
       <View style={styles.iconDot}>
-        <ProfilePicture url={profilePicture} size="medium" outlined={picked} />
+        <ProfilePicture url={profilePicture} size="small" outlined={picked} />
         <View style={styles.dot}>
           <Entypo name="dot-single" size={40} color="#49FE02" />
         </View>
@@ -35,8 +35,9 @@ const styles = StyleSheet.create({
     flexDirection: "row",
   },
   dot: {
-    paddingTop: 22,
+    paddingTop: 24,
     marginLeft: -31,
+    marginBottom: -10
   },
   text: {
     marginLeft: -11,

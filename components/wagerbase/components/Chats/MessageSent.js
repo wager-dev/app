@@ -9,9 +9,7 @@ export const MessageSent = ({ message, incoming }) => {
     return (
       <View style={{ alignItems: "flex-end" }}>
         <View style={styles.incoming}>
-          <WagerText type="regular" style={styles.messageContent}>
-            <Text>{message}</Text>
-          </WagerText>
+          <WagerText type="regular" style={styles.messageContent}> {message} </WagerText>
         </View>
       </View>
     );
@@ -19,9 +17,7 @@ export const MessageSent = ({ message, incoming }) => {
     return (
       <View style={{ alignItems: "flex-start" }}>
         <View style={styles.outgoing}>
-          <WagerText type="regular" style={styles.messageContent}>
-            <Text>{message}</Text>
-          </WagerText>
+          <WagerText type="regular" style={styles.messageContent}> {message} </WagerText>
         </View>
       </View>
     );
@@ -37,14 +33,10 @@ const styles = StyleSheet.create({
     maxWidth: "50%",
     alignItems: "flex-start",
     marginTop: 15,
+    padding: 10
   },
   messageContent: {
-    fontSize: 20,
     color: Colors.white,
-    paddingTop: 10,
-    paddingBottom: 10,
-    paddingLeft: 15,
-    paddingRight: 15,
   },
   outgoing: {
     backgroundColor: Colors.grey.light,
@@ -54,5 +46,6 @@ const styles = StyleSheet.create({
     maxWidth: "50%",
     alignItems: "flex-end",
     marginTop: 15,
+    padding: 10
   },
 });

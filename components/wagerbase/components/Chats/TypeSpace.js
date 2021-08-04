@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
   type: {
     display: "flex",
     backgroundColor: Colors.grey.light,
-    width: "65%",
+    width: "80%",
     height: 30,
     flexDirection: "column",
     alignItems: "flex-start",
@@ -47,12 +47,10 @@ const styles = StyleSheet.create({
     borderTopRightRadius: 10,
     paddingLeft: 10,
     color: Colors.white,
-    fontSize: 20,
   },
   placeholder: {
     paddingLeft: 8,
     color: Colors.white,
-    fontSize: 15,
   },
   send: {
     paddingLeft: 10,

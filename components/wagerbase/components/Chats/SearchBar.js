@@ -12,7 +12,7 @@ export const SearchBar = () => {
         <EvilIcons name="search" size={24} color="white" />
       </View>
       <View style={styles.text}>
-        <WagerText type="bold"> Search </WagerText>
+        <WagerText type="regualar"> Search </WagerText>
       </View>
     </View>
   );
