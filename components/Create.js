@@ -1,19 +1,18 @@
-import * as React from "react";
+import * as React from 'react';
 import {
   View,
   ScrollView,
   StyleSheet,
   Modal,
   TouchableOpacity,
-  TouchableWithoutFeedback,
-} from "react-native";
+} from 'react-native';
 
-import { BlurView } from "expo-blur";
-import Header from "./Header";
-import { NewWager } from "./wagerbase";
-import { Game } from "./wagerbase";
-import { Colors } from "./wagerbase/util";
-import { games } from "../data/games";
+import { BlurView } from 'expo-blur';
+import Header from './Header';
+import { NewWager } from './wagerbase';
+import { Game } from './wagerbase';
+import { Colors } from './wagerbase/util';
+import { games } from '../data/games';
 
 function Home({ navigation }) {
   const [showModal, setShowModal] = React.useState(false);
@@ -27,9 +26,9 @@ function Home({ navigation }) {
   return (
     <View
       style={{
-        flexDirection: "column",
+        flexDirection: 'column',
         backgroundColor: Colors.grey.background,
-        height: "100%",
+        height: '100%',
       }}
     >
       <Header />
@@ -53,16 +52,11 @@ function Home({ navigation }) {
       </ScrollView>
       {showModal && (
         <>
-          <TouchableWithoutFeedback
-            onPress={() => alert("Pressed!")}
-            id="tester"
-          >
-            <BlurView
-              intensity={90}
-              tint={"dark"}
-              style={[StyleSheet.absoluteFill]}
-            />
-          </TouchableWithoutFeedback>
+          <BlurView
+            intensity={90}
+            tint={'dark'}
+            style={[StyleSheet.absoluteFill]}
+          />
           <Modal animationType="slide" transparent={true} visible={showModal}>
             <NewWager game={pickedGame} setShowModal={setShowModal} />
           </Modal>
@@ -75,26 +69,26 @@ function Home({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     marginTop: 20,
-    display: "flex",
-    alignItems: "center",
+    display: 'flex',
+    alignItems: 'center',
   },
   titleText: {
     marginTop: 10,
   },
   chooseIcons: {
     marginTop: 10,
-    display: "flex",
-    flexDirection: "row",
+    display: 'flex',
+    flexDirection: 'row',
   },
   touchable: {
-    display: "flex",
-    width: "100%",
-    flexDirection: "column",
-    alignItems: "center",
+    display: 'flex',
+    width: '100%',
+    flexDirection: 'column',
+    alignItems: 'center',
   },
   showModal: {
-    height: "100%",
-    backgroundColor: "rgba(0,0,0,0.7)",
+    height: '100%',
+    backgroundColor: 'rgba(0,0,0,0.7)',
   },
 });
 
