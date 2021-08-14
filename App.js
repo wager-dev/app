@@ -1,6 +1,6 @@
 import * as React from "react";
 import * as AppleAuthentication from "expo-apple-authentication";
-import { SafeAreaView } from "react-native";
+import { SafeAreaView, Settings } from "react-native";
 import { View, Image } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
@@ -14,7 +14,8 @@ import Wagers from "./components/Wagers";
 import Results from "./components/Results";
 import Chats from "./components/Chats";
 import Me from "./components/Me";
-import ChatStack from "./routes/chatStack";
+import chatStack from "./Routes/chatStack";
+import settingsStack from "./Routes/settingsStack";
 
 import { Colors } from "./components/wagerbase";
 
@@ -118,8 +119,8 @@ function App() {
             />
             <Tab.Screen name="Create" component={Create} />
             {/* <Tab.Screen name="PLACEHOLDER" component={Results} /> */}
-            <Tab.Screen name="Chats" component={ChatStack} />
-            <Tab.Screen name="Me" component={Me} />
+            <Tab.Screen name="Chats" component={chatStack} />
+            <Tab.Screen name="Me" component={settingsStack} />
           </Tab.Navigator>
         </NavigationContainer>
       </SafeAreaView>

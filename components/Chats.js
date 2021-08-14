@@ -18,14 +18,25 @@ function Chats({ navigation }) {
 
   return (
     <View
-      style={{
-        flexDirection: "column",
-        backgroundColor: Colors.grey.background,
-        height: "100%",
-      }}
+    style={{
+      flexDirection: "column",
+      backgroundColor: Colors.grey.background,
+      height: "100%",
+    }}
     >
-      <Header />
-      <ScrollView>
+    <Header />
+    <View style={{
+      height: "100%",
+      justifyContent: "center"
+    }}>
+      <WagerText style={{
+        textAlign: "center",
+        fontSize: 30
+      }}>
+        Chat coming soon!
+      </WagerText>
+    </View>
+       {/* <ScrollView>
         <View style={styles.title}>
           <WagerText type="bold">Chat</WagerText>
         </View>
@@ -61,8 +72,8 @@ function Chats({ navigation }) {
             ))}
           </View>
         </View>
-      </ScrollView>
-    </View>
+            </ScrollView>*/}
+    </View> 
   );
 }
 

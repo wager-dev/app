@@ -29,9 +29,7 @@ const Header = () => {
         <Image style={{ width: 100, height: 40 }} source={WagerLogo} />
       </View>
       <View style={{ width: "40%", order: 2, justifyContent: "flex-end" }}>
-        <TouchableOpacity activeOpacity={0.5}>
-          <Balance tokenAmount={80000} />
-        </TouchableOpacity>
+        <Balance tokenAmount={80000} />
       </View>
     </View>
   );

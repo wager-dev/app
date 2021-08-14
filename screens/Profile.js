@@ -2,7 +2,7 @@ import * as React from "react";
 import { View, Text, ScrollView, StyleSheet } from "react-native";
 import { Colors } from "../components/wagerbase";
 
-function NewWager() {
+function Profile() {
   return (
     <View
       style={{
@@ -10,8 +10,9 @@ function NewWager() {
         backgroundColor: Colors.grey.background,
         height: "100%",
       }}
-    ></View>
+    >
+    </View>
   );
 }
 
-export default NewWager;
+export default Profile;
