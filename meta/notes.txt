@@ -10,6 +10,10 @@ MAX
   - edit profile
 
  - wager swipe action  DONE
+
+ - import coin images
+ - settings navigation etc
+
  - football logos
 
 DAVID

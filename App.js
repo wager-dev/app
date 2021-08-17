@@ -11,8 +11,6 @@ import { WagerLogo } from "./assets";
 
 import Create from "./components/Create";
 import Wagers from "./components/Wagers";
-import Results from "./components/Results";
-import Chats from "./components/Chats";
 import Me from "./components/Me";
 import chatStack from "./routes/chatStack";
 import settingsStack from "./routes/settingsStack";
@@ -118,7 +116,6 @@ function App() {
               // options={{ tabBarBadge: 3 }} blah blah
             />
             <Tab.Screen name="Create" component={Create} />
-            {/* <Tab.Screen name="PLACEHOLDER" component={Results} /> */}
             <Tab.Screen name="Chats" component={chatStack} />
             <Tab.Screen name="Me" component={settingsStack} />
           </Tab.Navigator>

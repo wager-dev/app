@@ -9,7 +9,7 @@ import { STADIUM } from "../../../assets";
 export const LiveWagerCard = ({ wager }) => {
   return (
     <View style={styles.container}>
-      <ImageBackground source={STADIUM} style={styles.content}>
+      <ImageBackground source={STADIUM} style={styles.content} imageStyle={{ borderBottomLeftRadius: 10}}>
         <View style={styles.usersAndTeams}>
           <View style={styles.user}>
             <TeamAndProfilePicture
@@ -56,9 +56,6 @@ const styles = StyleSheet.create({
     marginTop: 20,
     display: "flex",
     flexDirection: "row",
-    borderTopRightRadius: 22,
-    borderBottomRightRadius: 22,
-    borderBottomLeftRadius: 22,
     shadowColor: "#000",
     shadowOffset: {
       width: 0,
@@ -89,8 +86,8 @@ const styles = StyleSheet.create({
     backgroundColor: "#0BDA51",
     height: 100,
     width: "20%",
-    borderTopRightRadius: 20,
-    borderBottomRightRadius: 20,
+    borderTopRightRadius: 10,
+    borderBottomRightRadius: 10,
     justifyContent: "center",
     alignItems: "center",
     display: "flex",
@@ -111,7 +108,6 @@ const styles = StyleSheet.create({
     display: "flex",
     flexDirection: "column",
     width: "80%",
-    borderBottomLeftRadius: 20,
     alignItems: "center",
     justifyContent: "center",
     alignItems: "center",
