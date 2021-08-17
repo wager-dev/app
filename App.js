@@ -1,6 +1,6 @@
 import * as React from "react";
 import * as AppleAuthentication from "expo-apple-authentication";
-import { SafeAreaView, Settings } from "react-native";
+import { SafeAreaView } from "react-native";
 import { View, Image } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
@@ -14,8 +14,8 @@ import Wagers from "./components/Wagers";
 import Results from "./components/Results";
 import Chats from "./components/Chats";
 import Me from "./components/Me";
-import chatStack from "./Routes/chatStack";
-import settingsStack from "./Routes/settingsStack";
+import chatStack from "./routes/chatStack";
+import settingsStack from "./routes/settingsStack";
 
 import { Colors } from "./components/wagerbase";
 

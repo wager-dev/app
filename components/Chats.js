@@ -25,18 +25,7 @@ function Chats({ navigation }) {
     }}
     >
     <Header />
-    <View style={{
-      height: "100%",
-      justifyContent: "center"
-    }}>
-      <WagerText style={{
-        textAlign: "center",
-        fontSize: 30
-      }}>
-        Chat coming soon!
-      </WagerText>
-    </View>
-       {/* <ScrollView>
+       <ScrollView>
         <View style={styles.title}>
           <WagerText type="bold">Chat</WagerText>
         </View>
@@ -72,7 +61,7 @@ function Chats({ navigation }) {
             ))}
           </View>
         </View>
-            </ScrollView>*/}
+            </ScrollView>
     </View> 
   );
 }

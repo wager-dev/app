@@ -15,7 +15,7 @@ export const Game = ({ teams, date, title }) => {
       <WagerText type="regular" style={{textAlign: "center"}}>{title}</WagerText>
       <View style={styles.content}>
         <View style={styles.awayTeam}>
-          <View>{getTeamLogo({ big: false })}</View>
+          <View>{getTeamLogo({ big: true })}</View>
           <WagerText type="regular" style={styles.teamName}>
             {awayTeam.name}
           </WagerText>
@@ -29,7 +29,7 @@ export const Game = ({ teams, date, title }) => {
           <WagerText type="regular">{date.time}</WagerText>
         </View>
         <View style={styles.homeTeam}>
-          <View>{getTeamLogo({ big: false })}</View>
+          <View>{getTeamLogo({ big: true })}</View>
           <WagerText type="regular" style={styles.teamName}>
             {homeTeam.name}
           </WagerText>
