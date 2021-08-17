@@ -1,8 +1,19 @@
 TODO:
 
 MAX
+ - placeholder for chat DONE
+ - balance not a button DONE
+ - fix game sizing  DONE
+ - import coin images 
+ - wager help on tap
+ - settings navigation etc IN PROGRESS
+  - edit profile
+
+ - wager swipe action  DONE
+
  - import coin images
  - settings navigation etc
+
  - football logos
 
 DAVID

@@ -28,7 +28,7 @@ const Header = () => {
       >
         <Image style={{ width: 100, height: 40 }} source={WagerLogo} />
       </View>
-      <View style={{ width: '40%', order: 2, justifyContent: 'flex-end' }}>
+      <View style={{ width: "40%", order: 2, justifyContent: "flex-end" }}>
         <Balance tokenAmount={80000} />
       </View>
     </View>

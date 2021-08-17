@@ -10,6 +10,9 @@ export { InviteFriends } from "./components/Chats/InviteFriends";
 export { FriendBubble } from "./components/Chats/FriendBubble";
 export { MessageSent } from "./components/Chats/MessageSent";
 export { TypeSpace } from "./components/Chats/TypeSpace";
+export { Withdraw } from "./components/Settings/Manage Balance/Withdraw";
+export { CurrentBalance } from "./components/Settings/Manage Balance/CurrentBalance";
+export { Deposit } from "./components/Settings/Manage Balance/Deposit";
 
 export { UpcomingWagerCard } from "./components/Wagers/WagerCards/UpcomingWagerCard";
 export { PendingWagerCard } from "./components/Wagers/WagerCards/PendingWagerCard";

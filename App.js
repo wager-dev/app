@@ -12,7 +12,8 @@ import { WagerLogo } from "./assets";
 import Create from "./components/Create";
 import Wagers from "./components/Wagers";
 import Me from "./components/Me";
-import ChatStack from "./routes/chatStack";
+import chatStack from "./routes/chatStack";
+import settingsStack from "./routes/settingsStack";
 
 import { Colors } from "./components/wagerbase";
 
@@ -115,8 +116,8 @@ function App() {
               // options={{ tabBarBadge: 3 }} blah blah
             />
             <Tab.Screen name="Create" component={Create} />
-            <Tab.Screen name="Chats" component={ChatStack} />
-            <Tab.Screen name="Me" component={Me} />
+            <Tab.Screen name="Chats" component={chatStack} />
+            <Tab.Screen name="Me" component={settingsStack} />
           </Tab.Navigator>
         </NavigationContainer>
       </SafeAreaView>

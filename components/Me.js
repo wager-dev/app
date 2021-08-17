@@ -10,16 +10,17 @@ import {
 import { WagerText } from "./wagerbase";
 import { MenuOptions } from "./wagerbase";
 import { ProfilePicture } from "./wagerbase";
-import { MaterialIcons } from "@expo/vector-icons";
 import { Colors } from "../components/wagerbase/util";
-import { Feather } from "@expo/vector-icons";
-import { Ionicons } from "@expo/vector-icons";
-import { Entypo } from "@expo/vector-icons";
-import { FontAwesome5 } from "@expo/vector-icons";
-import { SimpleLineIcons } from "@expo/vector-icons";
-import { MaterialCommunityIcons } from "@expo/vector-icons";
+import { SimpleLineIcons } from '@expo/vector-icons';
+import { MaterialIcons } from '@expo/vector-icons';
+import { AntDesign } from '@expo/vector-icons';
+
 
 function Me({ navigation }) {
+  const onPressHandler = (title) => {
+    navigation.navigate(title);
+  };
+
   return (
     <View
       style={{
@@ -51,7 +52,7 @@ function Me({ navigation }) {
             </View>
           </View>
           {menuOptions.map((option) => (
-            <TouchableOpacity activeOpacity={0.5}>
+            <TouchableOpacity activeOpacity={0.5} onPress={() => onPressHandler(option.title)}>
               <MenuOptions
                 key={option.id}
                 icon={option.icon}
@@ -68,47 +69,33 @@ function Me({ navigation }) {
 
 export const menuOptions = [
   {
-    id: "002",
-    title: "Notification",
-    icon: <Ionicons name="notifications" size={24} color={Colors.white} />,
-    toggle: true,
-  },
-  {
-    id: "006",
-    title: "Wallet",
-    icon: <Entypo name="wallet" size={24} color={Colors.white} />,
-    toggle: false,
-  },
-  {
-    id: "007",
-    title: "Invite Friends",
-    icon: <FontAwesome5 name="user-friends" size={24} color={Colors.white} />,
-    toggle: false,
-  },
-  {
-    id: "008",
-    title: "Contact Support",
-    icon: <MaterialIcons name="support-agent" size={24} color={Colors.white} />,
-    toggle: false,
-  },
-  {
     id: "001",
-    title: "Profile Setting",
-    icon: <Feather name="settings" size={24} color={Colors.white} />,
+    title: "Manage Balance",
+    icon: <SimpleLineIcons name="wallet" size={24} color="white" />,
     toggle: false,
   },
   {
-    id: "010",
-    title: "Tools",
-    icon: (
-      <MaterialCommunityIcons name="tools" size={24} color={Colors.white} />
-    ),
+    id: "002",
+    title: "History",
+    icon: <MaterialIcons name="history" size={26} color="white" />,
     toggle: false,
   },
   {
-    id: "009",
+    id: "003",
+    title: "Profile",
+    icon: <AntDesign name="profile" size={24} color="white" />,
+    toggle: false,
+  },
+  {
+    id: "004",
+    title: "Contact Support",
+    icon: <MaterialIcons name="contact-support" size={24} color="white" />,
+    toggle: false,
+  },
+  {
+    id: "005",
     title: "Log Out",
-    icon: <SimpleLineIcons name="logout" size={24} color={Colors.white} />,
+    icon: <MaterialIcons name="logout" size={24} color="white" />,
     toggle: false,
   },
 ];
